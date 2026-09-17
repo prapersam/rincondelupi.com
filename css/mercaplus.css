@@ -1,0 +1,1200 @@
+/* =========================================================
+   MERCAPLUS PROJECT PAGE
+========================================================= */
+
+:root {
+    --mp-bg: #070b12;
+    --mp-bg-soft: #0b111b;
+    --mp-panel: #0d1520;
+    --mp-panel-light: #111c29;
+    --mp-border: rgba(80, 190, 255, 0.16);
+
+    --mp-blue: #28a9ff;
+    --mp-cyan: #55e6ff;
+
+    --mp-text: #edf7ff;
+    --mp-muted: #91a6b8;
+    --mp-dim: #607486;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+body {
+    background: var(--mp-bg);
+}
+
+.project-section {
+    position: relative;
+    padding: 110px 0;
+    overflow: hidden;
+}
+
+.project-section:nth-child(even) {
+    background: var(--mp-bg-soft);
+}
+
+.project-section p {
+    color: var(--mp-muted);
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 9px 15px;
+
+    border: 1px solid var(--mp-border);
+    border-radius: 999px;
+
+    color: var(--mp-muted);
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: .25s ease;
+}
+
+.header-back:hover {
+    color: var(--mp-cyan);
+    border-color: rgba(85, 230, 255, .45);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.project-hero {
+    min-height: 720px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 40%,
+            rgba(40, 169, 255, .16),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #05080e 0%,
+            #07111d 55%,
+            #071521 100%
+        );
+}
+
+.project-hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 8, 14, .98) 0%,
+            rgba(4, 8, 14, .75) 45%,
+            rgba(4, 8, 14, .35) 100%
+        );
+
+    z-index: 1;
+}
+
+.project-hero-grid {
+    position: absolute;
+    inset: 0;
+
+    opacity: .25;
+
+    background-image:
+        linear-gradient(
+            rgba(70, 190, 255, .08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(70, 190, 255, .08) 1px,
+            transparent 1px
+        );
+
+    background-size: 70px 70px;
+
+    mask-image: linear-gradient(
+        90deg,
+        black,
+        transparent
+    );
+}
+
+.project-hero-content {
+    position: relative;
+    z-index: 3;
+
+    max-width: 850px;
+}
+
+.project-breadcrumb {
+    margin-bottom: 28px;
+
+    color: var(--mp-dim);
+
+    font-family: monospace;
+    font-size: 12px;
+    letter-spacing: .18em;
+}
+
+.project-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    padding: 8px 13px;
+
+    border: 1px solid rgba(85, 230, 255, .2);
+    border-radius: 999px;
+
+    background: rgba(85, 230, 255, .04);
+
+    color: var(--mp-cyan);
+
+    font-size: 11px;
+    letter-spacing: .14em;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--mp-cyan);
+
+    box-shadow:
+        0 0 12px rgba(85, 230, 255, .9);
+}
+
+.project-hero h1 {
+    margin: 0;
+
+    font-size: clamp(65px, 9vw, 125px);
+    line-height: .9;
+
+    letter-spacing: -.06em;
+
+    color: var(--mp-text);
+}
+
+.project-hero h1 span {
+    color: var(--mp-cyan);
+}
+
+.project-hero-subtitle {
+    max-width: 700px;
+
+    margin: 35px 0 18px;
+
+    font-size: clamp(22px, 3vw, 34px);
+    line-height: 1.25;
+
+    color: var(--mp-text) !important;
+}
+
+.project-hero-description {
+    max-width: 680px;
+
+    font-size: 16px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+.project-tags span {
+    padding: 8px 12px;
+
+    border: 1px solid var(--mp-border);
+    border-radius: 5px;
+
+    color: var(--mp-muted);
+
+    background: rgba(255, 255, 255, .025);
+
+    font-size: 12px;
+}
+
+.hero-terminal-decoration {
+    position: absolute;
+
+    right: 5%;
+    bottom: 60px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    z-index: 2;
+
+    color: rgba(85, 230, 255, .16);
+
+    font-family: monospace;
+    font-size: 12px;
+    letter-spacing: .3em;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+
+    margin-bottom: 55px;
+}
+
+.section-number {
+    padding-top: 7px;
+
+    color: var(--mp-cyan);
+
+    font-family: monospace;
+    font-size: 12px;
+    letter-spacing: .15em;
+}
+
+.eyebrow {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--mp-cyan);
+
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: .18em;
+}
+
+.section-heading h2 {
+    max-width: 760px;
+
+    margin: 0;
+
+    color: var(--mp-text);
+
+    font-size: clamp(34px, 5vw, 62px);
+    line-height: 1.05;
+
+    letter-spacing: -.035em;
+}
+
+.section-heading h2 span {
+    color: var(--mp-cyan);
+}
+
+.section-intro {
+    max-width: 780px;
+
+    margin-bottom: 55px;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.overview-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.7fr)
+        minmax(280px, .8fr);
+
+    gap: 90px;
+}
+
+.overview-main .lead {
+    margin-top: 0;
+
+    color: var(--mp-text);
+
+    font-size: 24px;
+    line-height: 1.55;
+}
+
+.overview-main p {
+    max-width: 750px;
+}
+
+.project-facts {
+    border-left: 1px solid var(--mp-border);
+    padding-left: 30px;
+}
+
+.fact {
+    padding: 20px 0;
+
+    border-bottom: 1px solid var(--mp-border);
+}
+
+.fact span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--mp-dim);
+
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: .15em;
+}
+
+.fact strong {
+    color: var(--mp-text);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   NETWORK ARCHITECTURE
+========================================================= */
+
+.network-layout {
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.network-node {
+    width: 270px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border: 1px solid var(--mp-border);
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.015)
+        );
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.25);
+}
+
+.node-icon {
+    margin-bottom: 10px;
+
+    color: var(--mp-cyan);
+
+    font-size: 25px;
+}
+
+.network-node strong {
+    display: block;
+
+    color: var(--mp-text);
+
+    font-size: 16px;
+}
+
+.network-node span {
+    display: block;
+
+    margin-top: 6px;
+
+    color: var(--mp-muted);
+
+    font-family: monospace;
+    font-size: 11px;
+}
+
+.firewall-node {
+    border-color: rgba(85, 230, 255, .4);
+
+    box-shadow:
+        0 0 50px rgba(40, 169, 255, .08);
+}
+
+.network-connector.vertical {
+    width: 1px;
+    height: 45px;
+
+    background:
+        linear-gradient(
+            var(--mp-cyan),
+            transparent
+        );
+}
+
+.vlan-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 12px;
+
+    margin-top: 5px;
+}
+
+.vlan-card {
+    min-height: 185px;
+
+    padding: 20px;
+
+    border: 1px solid var(--mp-border);
+    border-radius: 7px;
+
+    background: var(--mp-panel);
+
+    transition: .25s ease;
+}
+
+.vlan-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(85, 230, 255, .4);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.25);
+}
+
+.vlan-header {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-bottom: 15px;
+}
+
+.vlan-header span {
+    color: var(--mp-cyan);
+
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.vlan-header strong {
+    color: var(--mp-text);
+
+    font-size: 14px;
+}
+
+.vlan-ip {
+    color: var(--mp-muted);
+
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.vlan-card p {
+    margin-top: 15px;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SERVERS
+========================================================= */
+
+.servers-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.server-card {
+    position: relative;
+
+    padding: 32px;
+
+    border: 1px solid var(--mp-border);
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--mp-panel-light),
+            var(--mp-panel)
+        );
+
+    overflow: hidden;
+}
+
+.server-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background: rgba(85, 230, 255, .25);
+}
+
+.server-card.featured::before {
+    background: var(--mp-cyan);
+
+    box-shadow:
+        0 0 25px rgba(85, 230, 255, .5);
+}
+
+.server-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 28px;
+}
+
+.server-number {
+    color: var(--mp-cyan);
+
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.server-os {
+    color: var(--mp-dim);
+
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: .1em;
+}
+
+.server-card h3 {
+    margin: 0;
+
+    color: var(--mp-text);
+
+    font-family: monospace;
+    font-size: 28px;
+}
+
+.server-ip {
+    margin: 7px 0 20px;
+
+    color: var(--mp-cyan);
+
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.server-card p {
+    min-height: 55px;
+
+    font-size: 13px;
+}
+
+.server-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+
+    margin-top: 25px;
+}
+
+.server-services span {
+    padding: 6px 8px;
+
+    border: 1px solid var(--mp-border);
+    border-radius: 4px;
+
+    color: var(--mp-muted);
+
+    font-family: monospace;
+    font-size: 9px;
+}
+
+.dmz-card {
+    border-color: rgba(255, 170, 70, .18);
+}
+
+.dmz-card::before {
+    background: rgba(255, 170, 70, .6);
+}
+
+
+/* =========================================================
+   TECHNOLOGIES
+========================================================= */
+
+.technology-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    border-top: 1px solid var(--mp-border);
+    border-left: 1px solid var(--mp-border);
+}
+
+.technology-item {
+    min-height: 150px;
+
+    padding: 28px;
+
+    border-right: 1px solid var(--mp-border);
+    border-bottom: 1px solid var(--mp-border);
+
+    transition: .25s ease;
+}
+
+.technology-item:hover {
+    background: rgba(85, 230, 255, .025);
+}
+
+.technology-item strong {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--mp-text);
+
+    font-size: 16px;
+}
+
+.technology-item span {
+    color: var(--mp-muted);
+
+    font-family: monospace;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SERVICES TABLE
+========================================================= */
+
+.services-table {
+    border: 1px solid var(--mp-border);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.service-row {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr
+        1fr
+        .7fr
+        1.5fr;
+
+    gap: 20px;
+
+    padding: 18px 22px;
+
+    border-bottom: 1px solid var(--mp-border);
+}
+
+.service-row:last-child {
+    border-bottom: 0;
+}
+
+.service-row span {
+    color: var(--mp-muted);
+
+    font-size: 12px;
+}
+
+.service-row span:first-child {
+    color: var(--mp-text);
+
+    font-weight: 600;
+}
+
+.service-header {
+    background: rgba(85, 230, 255, .035);
+}
+
+.service-header span {
+    color: var(--mp-cyan) !important;
+
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: .08em;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 24px;
+    top: 10px;
+    bottom: 10px;
+
+    width: 1px;
+
+    background:
+        linear-gradient(
+            var(--mp-cyan),
+            var(--mp-border)
+        );
+}
+
+.timeline-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 50px 1fr;
+
+    gap: 25px;
+
+    margin-bottom: 45px;
+}
+
+.timeline-marker {
+    position: relative;
+    z-index: 2;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(85, 230, 255, .35);
+    border-radius: 50%;
+
+    background: var(--mp-bg);
+
+    color: var(--mp-cyan);
+
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.timeline-content {
+    padding-top: 3px;
+}
+
+.timeline-content > span {
+    color: var(--mp-cyan);
+
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: .12em;
+}
+
+.timeline-content h3 {
+    margin: 8px 0;
+
+    color: var(--mp-text);
+
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   DOCUMENTATION
+========================================================= */
+
+.documentation-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.document-card {
+    display: grid;
+
+    grid-template-columns:
+        auto 1fr auto;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 22px;
+
+    border: 1px solid var(--mp-border);
+    border-radius: 7px;
+
+    background: var(--mp-panel);
+
+    text-decoration: none;
+
+    transition: .25s ease;
+}
+
+.document-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(85, 230, 255, .4);
+}
+
+.document-icon {
+    width: 45px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(85, 230, 255, .25);
+    border-radius: 4px;
+
+    color: var(--mp-cyan);
+
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.document-card span:not(.document-arrow) {
+    color: var(--mp-dim);
+
+    font-family: monospace;
+    font-size: 8px;
+    letter-spacing: .1em;
+}
+
+.document-card h3 {
+    margin: 5px 0;
+
+    color: var(--mp-text);
+
+    font-size: 15px;
+}
+
+.document-card p {
+    margin: 0;
+
+    font-size: 11px;
+}
+
+.document-arrow {
+    color: var(--mp-cyan);
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+.project-result {
+    padding: 100px 0;
+
+    background:
+        radial-gradient(
+            circle at 70% 50%,
+            rgba(40, 169, 255, .08),
+            transparent 40%
+        ),
+        #05090f;
+}
+
+.result-box {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        200px;
+
+    align-items: center;
+
+    gap: 60px;
+
+    padding: 65px;
+
+    border: 1px solid rgba(85, 230, 255, .2);
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(85,230,255,.035),
+            rgba(255,255,255,.01)
+        );
+}
+
+.result-box h2 {
+    max-width: 700px;
+
+    margin: 0 0 20px;
+
+    color: var(--mp-text);
+
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.05;
+}
+
+.result-box h2 span {
+    color: var(--mp-cyan);
+}
+
+.result-box p {
+    max-width: 700px;
+}
+
+.result-stat {
+    text-align: center;
+}
+
+.result-stat strong {
+    display: block;
+
+    color: var(--mp-cyan);
+
+    font-size: 100px;
+    line-height: .8;
+}
+
+.result-stat span {
+    display: block;
+
+    margin-top: 20px;
+
+    color: var(--mp-muted);
+
+    font-family: monospace;
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: .12em;
+}
+
+
+/* =========================================================
+   END
+========================================================= */
+
+.project-end {
+    padding: 120px 0;
+
+    text-align: center;
+}
+
+.project-end h2 {
+    max-width: 800px;
+
+    margin: 0 auto 35px;
+
+    color: var(--mp-text);
+
+    font-size: clamp(38px, 6vw, 70px);
+    line-height: 1;
+}
+
+.project-end h2 span {
+    color: var(--mp-cyan);
+}
+
+.project-button {
+    display: inline-flex;
+
+    padding: 13px 22px;
+
+    border: 1px solid rgba(85, 230, 255, .3);
+    border-radius: 5px;
+
+    color: var(--mp-cyan);
+
+    text-decoration: none;
+
+    font-family: monospace;
+    font-size: 12px;
+
+    transition: .25s ease;
+}
+
+.project-button:hover {
+    background: rgba(85, 230, 255, .07);
+
+    border-color: var(--mp-cyan);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .vlan-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .technology-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .documentation-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .project-hero {
+        min-height: 650px;
+    }
+
+    .overview-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .project-facts {
+        border-left: 0;
+
+        border-top: 1px solid var(--mp-border);
+
+        padding: 0;
+    }
+
+    .servers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vlan-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .result-box {
+        grid-template-columns: 1fr;
+
+        padding: 40px;
+    }
+
+    .result-stat {
+        text-align: left;
+    }
+
+    .result-stat strong {
+        font-size: 70px;
+    }
+
+    .service-row {
+        grid-template-columns:
+            1fr
+            1fr;
+    }
+
+    .service-header {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .project-section {
+        padding: 80px 0;
+    }
+
+    .project-hero h1 {
+        font-size: 62px;
+    }
+
+    .project-hero-subtitle {
+        font-size: 21px;
+    }
+
+    .hero-terminal-decoration {
+        display: none;
+    }
+
+    .section-heading {
+        gap: 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .vlan-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .technology-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-row {
+        grid-template-columns: 1fr;
+        gap: 7px;
+    }
+
+    .result-box {
+        padding: 30px;
+    }
+
+}
