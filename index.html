@@ -1,21 +1,811 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Rincón de Lupi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rincón de Lupi — Portfolio técnico de Samuel Prado Pereira, Técnico de Sistemas Informáticos en Red.">
+    <meta name="theme-color" content="#020b16">
+    <title>Rincón de Lupi | Samuel Prado Pereira</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a class="brand" href="#inicio" aria-label="Rincón de Lupi">
+                <img src="assets/images/logo/lupi.png" alt="Lupi">
+                <span>LUPI</span>
+            </a>
 
-  <h1>Rincón de Lupi</h1>
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
 
-  <p>
-    Portfolio personal y técnico de Samuel Prado Pereira.
-  </p>
-  
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a class="active" href="#inicio">Inicio</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#documentacion">Documentación</a>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#cv">CV</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#" aria-label="GitHub">GH</a>
+                <a href="#" aria-label="LinkedIn">in</a>
+                <a href="mailto:correo@ejemplo.com" aria-label="Correo">@</a>
+            </div>
+
+            <span class="header-pill">Sistemas que impulsan ideas</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+
+    <!-- Imagen principal del Hero -->
+    <div class="hero-background">
+        <img
+            src="assets/images/hero/hero.png"
+            alt="Samuel Prado Pereira en su entorno de trabajo"
+        >
+    </div>
+
+    <!-- Oscurece la parte izquierda para mejorar la lectura -->
+    <div class="hero-overlay"></div>
+
+    <!-- Efectos visuales -->
+    <div class="hero-glow"></div>
+    <div class="stars"></div>
+
+    <div class="container hero-inner">
+
+        <!-- TEXTO -->
+        <div class="hero-copy">
+
+            <p class="eyebrow">
+                SISTEMAS QUE IMPULSAN IDEAS
+            </p>
+
+            <h1>
+                Samuel Prado
+                <span>Pereira</span>
+            </h1>
+
+            <h2>
+                Técnico de Sistemas Informáticos en Red
+            </h2>
+
+            <p class="hero-text">
+                Apasionado por la infraestructura IT, la tecnología y la mejora continua.
+                Diseño, administro y documento sistemas que funcionan,
+                aportando valor y resolviendo problemas reales.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#proyectos" class="button button-primary">
+                    Ver proyectos
+                    <span>→</span>
+                </a>
+
+                <a href="#cv" class="button button-secondary">
+                    Descargar CV
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+            <div class="hero-skills">
+
+                <span>Sistemas</span>
+                <i>·</i>
+
+                <span>Redes</span>
+                <i>·</i>
+
+                <span>Virtualización</span>
+                <i>·</i>
+
+                <span>Seguridad</span>
+                <i>·</i>
+
+                <span>Automatización</span>
+
+            </div>
+
+            <div class="hero-quote">
+                <span></span>
+                <p>
+                    “La tecnología es más interesante<br>
+                    cuando resuelve problemas reales.”
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- ELEMENTOS SOBRE LA IMAGEN -->
+        <div class="hero-decoration">
+
+            <div class="hero-words">
+
+                <span>IDEAS</span>
+                <span>INFRAESTRUCTURA</span>
+                <span>RESULTADOS</span>
+
+                <b></b>
+
+                <small>
+                    Same systems<br>
+                    Bigger tomorrow
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</section>
+
+<!-- =========================================
+     ESPECIALIDADES
+========================================= -->
+
+<section class="specialties">
+
+    <div class="container">
+
+        <div class="specialties-grid">
+
+            <article class="specialty">
+                <div class="specialty-icon">▣</div>
+
+                <div>
+                    <h3>Sistemas</h3>
+                    <p>
+                        Windows · Linux<br>
+                        Samba · Microsoft 365
+                    </p>
+                </div>
+            </article>
+
+
+            <article class="specialty">
+                <div class="specialty-icon">◇</div>
+
+                <div>
+                    <h3>Redes</h3>
+                    <p>
+                        VLAN · DNS · DHCP<br>
+                        pfSense · VPN
+                    </p>
+                </div>
+            </article>
+
+
+            <article class="specialty">
+                <div class="specialty-icon">⬡</div>
+
+                <div>
+                    <h3>Virtualización</h3>
+                    <p>
+                        Proxmox · VirtualBox<br>
+                        VMware
+                    </p>
+                </div>
+            </article>
+
+
+            <article class="specialty">
+                <div class="specialty-icon">○</div>
+
+                <div>
+                    <h3>Seguridad</h3>
+                    <p>
+                        Sophos · GPO · Hardening<br>
+                        Monitorización
+                    </p>
+                </div>
+            </article>
+
+
+            <article class="specialty">
+                <div class="specialty-icon">⚙</div>
+
+                <div>
+                    <h3>Automatización</h3>
+                    <p>
+                        Scripts · n8n · Git<br>
+                        Backup
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     PROYECTOS
+========================================= -->
+
+<section class="projects-section" id="proyectos">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="section-eyebrow">
+                    PROYECTOS DESTACADOS
+                </p>
+
+                <h2>
+                    De la teoría a la infraestructura real
+                </h2>
+            </div>
+
+            <a href="#proyectos" class="section-link">
+                Ver todos los proyectos →
+            </a>
+
+        </div>
+
+
+        <div class="project-grid">
+
+
+            <!-- MERCAPLUS -->
+
+            <article class="project-card">
+
+                <div class="project-image project-mercaplus">
+                    <span>MercaPlus</span>
+                </div>
+
+                <div class="project-body">
+
+                    <h3>MercaPlus</h3>
+
+                    <p>
+                        Infraestructura IT completa para un supermercado:
+                        redes, servidores, ERP, seguridad y monitorización.
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>pfSense</span>
+                        <span>Samba</span>
+                        <span>Odoo</span>
+                        <span>Zabbix</span>
+
+                    </div>
+
+                    <a href="#" class="project-link">
+                        Ver proyecto →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- HOMELAB -->
+
+            <article class="project-card">
+
+                <div class="project-image project-homelab">
+                    <span>Homelab</span>
+                </div>
+
+                <div class="project-body">
+
+                    <h3>Homelab</h3>
+
+                    <p>
+                        Infraestructura personal basada en ThinkCentre
+                        para aprender, automatizar y documentar.
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>Proxmox</span>
+                        <span>Docker</span>
+                        <span>n8n</span>
+                        <span>Jellyfin</span>
+
+                    </div>
+
+                    <span class="project-status">
+                        En desarrollo...
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- LUPIPC -->
+
+            <article class="project-card">
+
+                <div class="project-image project-lupipc">
+                    <span>LupiPC</span>
+                </div>
+
+                <div class="project-body">
+
+                    <h3>LupiPC</h3>
+
+                    <p>
+                        Aplicación para optimización y monitorización
+                        de equipos Windows.
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>C#</span>
+                        <span>WPF</span>
+                        <span>Windows</span>
+                        <span>Optimización</span>
+
+                    </div>
+
+                    <a href="#" class="project-link">
+                        Ver más →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- SOPHOS -->
+
+            <article class="project-card">
+
+                <div class="project-image project-sophos">
+                    <span>Sophos</span>
+                </div>
+
+                <div class="project-body">
+
+                    <h3>Formación Sophos</h3>
+
+                    <p>
+                        Documentación y laboratorios técnicos
+                        sobre Sophos Firewall.
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>Sophos</span>
+                        <span>Seguridad</span>
+                        <span>Redes</span>
+
+                    </div>
+
+                    <a href="#documentacion" class="project-link">
+                        Ver documentación →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     DOCUMENTACIÓN
+========================================= -->
+
+<section class="documentation-section" id="documentacion">
+
+    <div class="container">
+
+        <div class="section-eyebrow">
+            DOCUMENTACIÓN
+        </div>
+
+        <div class="documentation-content">
+
+            <div>
+
+                <h2>
+                    Documentación técnica
+                </h2>
+
+                <p>
+                    Guías, laboratorios, procedimientos y documentación
+                    técnica desarrollada a partir de proyectos reales
+                    y entornos de laboratorio.
+                </p>
+
+            </div>
+
+            <a href="#" class="button button-secondary">
+                Explorar documentación →
+            </a>
+
+        </div>
+
+
+        <div class="documentation-grid">
+
+
+            <article class="documentation-card">
+
+                <span class="documentation-icon">
+                    ◇
+                </span>
+
+                <div>
+
+                    <h3>
+                        Infraestructura
+                    </h3>
+
+                    <p>
+                        Redes, servidores, virtualización,
+                        servicios y administración de sistemas.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="documentation-card">
+
+                <span class="documentation-icon">
+                    ◈
+                </span>
+
+                <div>
+
+                    <h3>
+                        Seguridad
+                    </h3>
+
+                    <p>
+                        Sophos, firewalls, GPO, hardening,
+                        monitorización y buenas prácticas.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="documentation-card">
+
+                <span class="documentation-icon">
+                    ⬡
+                </span>
+
+                <div>
+
+                    <h3>
+                        Laboratorios
+                    </h3>
+
+                    <p>
+                        Pruebas, configuraciones y escenarios
+                        realizados en entornos de laboratorio.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     SOBRE MÍ
+========================================= -->
+
+<section class="about-section" id="sobre-mi">
+
+    <div class="container">
+
+        <div class="section-eyebrow">
+            SOBRE MÍ
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-copy">
+
+                <h2>
+                    Sistemas, infraestructura
+                    y aprendizaje continuo.
+                </h2>
+
+                <p>
+                    Soy Samuel Prado Pereira, Técnico de Sistemas
+                    Informáticos en Red, orientado a la administración
+                    de sistemas, redes e infraestructura IT.
+                </p>
+
+                <p>
+                    Mi forma de trabajar se basa en entender cómo
+                    funciona cada componente, documentarlo y buscar
+                    soluciones que sean mantenibles y útiles en
+                    entornos reales.
+                </p>
+
+                <p>
+                    Este espacio reúne mis proyectos, documentación,
+                    laboratorios y evolución técnica.
+                </p>
+
+            </div>
+
+
+            <div class="about-details">
+
+                <div class="about-detail">
+
+                    <span>01</span>
+
+                    <div>
+                        <h3>Sistemas</h3>
+                        <p>
+                            Windows · Linux · Microsoft 365 · Samba
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="about-detail">
+
+                    <span>02</span>
+
+                    <div>
+                        <h3>Infraestructura</h3>
+                        <p>
+                            Redes · Servidores · Virtualización
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="about-detail">
+
+                    <span>03</span>
+
+                    <div>
+                        <h3>Seguridad</h3>
+                        <p>
+                            Firewalls · GPO · Hardening · Monitorización
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="about-detail">
+
+                    <span>04</span>
+
+                    <div>
+                        <h3>Automatización</h3>
+                        <p>
+                            Scripts · Git · n8n · Backup
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     CV
+========================================= -->
+
+<section class="cv-section" id="cv">
+
+    <div class="container">
+
+        <div class="cv-box">
+
+            <div>
+
+                <p class="section-eyebrow">
+                    PERFIL PROFESIONAL
+                </p>
+
+                <h2>
+                    ¿Quieres conocer mi perfil?
+                </h2>
+
+                <p>
+                    Consulta mi CV para conocer mi formación,
+                    experiencia, conocimientos técnicos y trayectoria.
+                </p>
+
+            </div>
+
+            <a href="assets/cv/cv.pdf"
+               class="button button-primary"
+               target="_blank">
+
+                Descargar CV
+                <span>↗</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     CONTACTO
+========================================= -->
+
+<section class="contact-section" id="contacto">
+
+    <div class="container">
+
+        <div class="section-eyebrow">
+            CONTACTO
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-copy">
+
+                <h2>
+                    Hablemos de sistemas.
+                </h2>
+
+                <p>
+                    Si quieres conocer alguno de mis proyectos,
+                    hablar sobre infraestructura IT o contactar
+                    conmigo profesionalmente, puedes hacerlo
+                    a través de cualquiera de estos canales.
+                </p>
+
+            </div>
+
+
+            <div class="contact-links">
+
+                <a href="https://github.com/prapersam"
+                   target="_blank"
+                   class="contact-link">
+
+                    <span>GH</span>
+
+                    <div>
+                        <strong>GitHub</strong>
+                        <small>
+                            Proyectos y código
+                        </small>
+                    </div>
+
+                    <b>↗</b>
+
+                </a>
+
+
+                <a href="#"
+                   class="contact-link">
+
+                    <span>in</span>
+
+                    <div>
+                        <strong>LinkedIn</strong>
+                        <small>
+                            Perfil profesional
+                        </small>
+                    </div>
+
+                    <b>↗</b>
+
+                </a>
+
+
+                <a href="mailto:contacto@rincondelupi.com"
+                   class="contact-link">
+
+                    <span>@</span>
+
+                    <div>
+                        <strong>Email</strong>
+                        <small>
+                            Contacto directo
+                        </small>
+                    </div>
+
+                    <b>↗</b>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="site-footer">
+
+    <div class="container footer-inner">
+
+        <div class="footer-brand">
+
+            <strong>LUPI</strong>
+
+            <span></span>
+
+            <p>
+                Samuel Prado Pereira
+            </p>
+
+        </div>
+
+
+        <div class="footer-slogan">
+
+            “SISTEMAS QUE IMPULSAN IDEAS”
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="https://github.com/prapersam"
+               target="_blank">
+                GitHub
+            </a>
+
+            <span>|</span>
+
+            <a href="#">
+                LinkedIn
+            </a>
+
+            <span>|</span>
+
+            <a href="#contacto">
+                Contacto
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
 </body>
-
 </html>
