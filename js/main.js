@@ -201,10 +201,10 @@ if (intro) {
 
     setTimeout(() => {
         intro.classList.add("hide");
-    }, 1000);
+    }, 1200);
 
     setTimeout(() => {
         intro.remove();
-    }, 1700);
+    }, 2100);
 
 }
