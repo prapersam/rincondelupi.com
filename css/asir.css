@@ -1,0 +1,252 @@
+/* =========================================================
+   RINCÓN DE LUPI — ASIR
+   Documentación de 1º y 2º ASIR
+   ========================================================= */
+
+.asir-page {
+    padding-top: 74px;
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.asir-hero {
+    min-height: 48vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2, 11, 22, .98) 0%,
+            rgba(2, 11, 22, .90) 55%,
+            rgba(2, 11, 22, .98) 100%
+        );
+}
+
+.asir-hero-content {
+    padding: 90px 0;
+}
+
+.asir-label {
+    margin-bottom: 18px;
+    color: var(--cyan);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+}
+
+.asir-hero h1 {
+    margin: 0;
+    max-width: 900px;
+    color: var(--text);
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: .95;
+    letter-spacing: -.04em;
+}
+
+.asir-hero h1 span {
+    color: var(--cyan);
+}
+
+.asir-hero-description {
+    max-width: 720px;
+    margin-top: 28px;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* =========================
+   MODULES
+   ========================= */
+
+.asir-section {
+    padding: 100px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.asir-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: 55px;
+}
+
+.asir-section-number {
+    margin-bottom: 12px;
+    color: var(--cyan);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .28em;
+}
+
+.asir-section h2 {
+    margin: 0;
+    color: var(--text);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1;
+    letter-spacing: -.03em;
+}
+
+.asir-section-intro {
+    max-width: 520px;
+    margin: 0;
+    color: var(--muted);
+    font-size: .95rem;
+    line-height: 1.7;
+}
+
+/* =========================
+   MODULE GRID
+   ========================= */
+
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.module-card {
+    position: relative;
+    min-height: 190px;
+    padding: 30px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    text-decoration: none;
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        transform .2s ease;
+}
+
+.module-card:hover {
+    border-color: rgba(0, 200, 255, .55);
+    background: var(--bg-soft);
+    transform: translateY(-3px);
+}
+
+.module-code {
+    display: block;
+    margin-bottom: 35px;
+    color: var(--cyan);
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .22em;
+}
+
+.module-card h3 {
+    margin: 0 0 12px;
+    color: var(--text);
+    font-size: 1.15rem;
+    line-height: 1.3;
+}
+
+.module-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: .82rem;
+    line-height: 1.6;
+}
+
+.module-arrow {
+    position: absolute;
+    right: 28px;
+    bottom: 25px;
+    color: var(--cyan);
+    font-size: 1.1rem;
+}
+
+/* =========================
+   BOTTOM NAVIGATION
+   ========================= */
+
+.asir-navigation {
+    padding: 65px 0;
+}
+
+.asir-navigation-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.asir-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: .78rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    transition: color .2s ease;
+}
+
+.asir-back:hover {
+    color: var(--cyan);
+}
+
+.asir-next {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 18px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    transition:
+        border-color .2s ease,
+        color .2s ease;
+}
+
+.asir-next:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1000px) {
+    .module-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .asir-hero-content {
+        padding: 70px 0;
+    }
+
+    .asir-section {
+        padding: 70px 0;
+    }
+
+    .asir-section-header {
+        display: block;
+        margin-bottom: 35px;
+    }
+
+    .asir-section-intro {
+        margin-top: 20px;
+    }
+
+    .module-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .asir-navigation-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
