@@ -1,1556 +1,868 @@
 /* =========================================================
    MERCAPLUS
    RINCÓN DE LUPI
+   Estilos específicos del proyecto
 ========================================================= */
-
-
-/* =========================================================
-   VARIABLES
-========================================================= */
-
-:root {
-
-    --mp-bg: #020a13;
-
-    --mp-bg-soft: #04101b;
-
-    --mp-card: #061522;
-
-    --mp-card-soft: #071925;
-
-    --mp-cyan: #00cfff;
-
-    --mp-cyan-bright: #18d8ff;
-
-    --mp-white: #f2f6ff;
-
-    --mp-text: #d4e1f0;
-
-    --mp-muted: #91a7bd;
-
-    --mp-border: rgba(0, 207, 255, 0.16);
-
-    --mp-border-soft: rgba(255, 255, 255, 0.07);
-
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.site-header {
-    position: relative;
-
-    z-index: 100;
-
-    height: 65px;
-
-    border-bottom:
-        1px solid rgba(255, 255, 255, 0.06);
-
-    background:
-        #020a13;
-}
-
-
-.site-header .header-inner {
-    height: 65px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 30px;
-}
-
-
-/* LOGO */
-
-.site-header .brand {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 11px;
-
-    flex-shrink: 0;
-
-    text-decoration: none;
-}
-
-
-.site-header .brand img {
-
-    width: 40px !important;
-    height: 40px !important;
-
-    max-width: 40px !important;
-    max-height: 40px !important;
-
-    object-fit: contain;
-
-    display: block;
-}
-
-
-.site-header .brand span {
-
-    color: #f4f8ff;
-
-    font-size: 1rem;
-
-    font-weight: 800;
-
-    letter-spacing: 0.22em;
-
-    line-height: 1;
-}
-
-
-/* NAV */
-
-.site-header .main-nav {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 27px;
-
-    margin-left: auto;
-}
-
-
-.site-header .main-nav a {
-
-    position: relative;
-
-    padding: 24px 0 21px;
-
-    color: #9aabbd;
-
-    text-decoration: none;
-
-    font-size: 0.72rem;
-
-    white-space: nowrap;
-
-    transition:
-        color 0.2s ease;
-}
-
-
-.site-header .main-nav a:hover {
-
-    color: #ffffff;
-}
-
-
-.site-header .main-nav a.active {
-
-    color: #ffffff;
-}
-
-
-.site-header .main-nav a.active::after {
-
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    right: 0;
-
-    bottom: 0;
-
-    height: 2px;
-
-    background:
-        var(--mp-cyan);
-}
-
-
-/* PARTE DERECHA */
-
-.header-extra {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 22px;
-
-    flex-shrink: 0;
-}
-
-
-.header-socials {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 14px;
-}
-
-
-.header-socials a {
-
-    color: #a9bacb;
-
-    text-decoration: none;
-
-    font-size: 0.72rem;
-
-    font-weight: 700;
-
-    transition:
-        color 0.2s ease;
-}
-
-
-.header-socials a:hover {
-
-    color: var(--mp-cyan);
-}
-
-
-.header-pill {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    height: 36px;
-
-    padding: 0 18px;
-
-    border:
-        1px solid var(--mp-cyan);
-
-    border-radius: 999px;
-
-    color: var(--mp-cyan);
-
-    font-size: 0.62rem;
-
-    font-weight: 700;
-
-    white-space: nowrap;
-}
 
 
 /* =========================================================
    HERO
 ========================================================= */
 
-.mp-hero {
-
+.project-hero {
     position: relative;
-
-    min-height: 620px;
-
-    display: flex;
-
-    align-items: center;
-
+    min-height: 590px;
+    padding-top: 74px;
     overflow: hidden;
 
     background:
         radial-gradient(
-            circle at 75% 45%,
-            rgba(0, 207, 255, 0.07),
-            transparent 30%
+            circle at 78% 45%,
+            rgba(0, 150, 255, .10),
+            transparent 32%
         ),
+        linear-gradient(
+            135deg,
+            #020b16 0%,
+            #031522 55%,
+            #020b16 100%
+        );
 
-        #020a13;
+    border-bottom: 1px solid var(--border);
 }
 
 
-.mp-hero-grid {
+.project-hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2, 11, 22, .98) 0%,
+            rgba(2, 11, 22, .86) 50%,
+            rgba(2, 11, 22, .45) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+.project-hero::after {
+    content: "";
 
     position: absolute;
 
-    inset: 0;
+    width: 500px;
+    height: 500px;
 
-    opacity: 0.16;
+    right: 5%;
+    top: 50%;
 
-    background-image:
+    transform: translateY(-50%);
 
-        linear-gradient(
-            rgba(0, 207, 255, 0.05) 1px,
-            transparent 1px
-        ),
+    border-radius: 50%;
 
-        linear-gradient(
-            90deg,
-            rgba(0, 207, 255, 0.05) 1px,
-            transparent 1px
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 200, 255, .10),
+            transparent 70%
         );
 
-    background-size:
-        70px 70px;
+    filter: blur(35px);
 
-    mask-image:
-        linear-gradient(
-            to right,
-            black,
-            transparent 80%
-        );
+    pointer-events: none;
 }
 
 
-.mp-hero .container {
-
+.project-hero-inner {
     position: relative;
-
     z-index: 2;
 
-    min-height: 620px;
+    min-height: 516px;
 
     display: flex;
-
     align-items: center;
-
-    justify-content: space-between;
 }
 
 
-.mp-hero-content {
-
-    max-width: 900px;
-
-    padding:
-        80px 0 100px;
+.project-hero-copy {
+    max-width: 780px;
+    padding-bottom: 10px;
 }
 
 
-.mp-kicker {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    margin-bottom: 24px;
-
-    color: var(--mp-cyan);
-
-    font-size: 0.68rem;
-
-    font-weight: 800;
-
-    letter-spacing: 0.2em;
-}
-
-
-.mp-kicker span {
-
-    width: 25px;
-
-    height: 1px;
-
-    background:
-        var(--mp-cyan);
-}
-
-
-.mp-hero h1 {
-
-    margin: 0 0 22px;
+.project-hero h1 {
+    margin-bottom: 8px;
 
     font-size:
-        clamp(5rem, 10vw, 9rem);
+        clamp(
+            3.8rem,
+            7vw,
+            6.5rem
+        );
 
-    line-height: 0.84;
+    line-height: .9;
 
-    letter-spacing: -0.075em;
+    text-transform: uppercase;
+    letter-spacing: .02em;
 
-    color: var(--mp-white);
+    font-weight: 900;
 }
 
 
-.mp-hero h2 {
+.project-hero h1 span {
+    display: block;
+    color: var(--cyan);
+}
 
-    max-width: 720px;
 
-    margin: 0 0 22px;
+.project-hero h2 {
+    margin-bottom: 22px;
+
+    color: #bfd5ec;
 
     font-size:
-        clamp(1.3rem, 2.4vw, 1.8rem);
+        clamp(
+            1.2rem,
+            2vw,
+            1.55rem
+        );
 
     font-weight: 500;
-
-    line-height: 1.35;
-
-    color: #dce8f5;
 }
 
 
-.mp-hero-description {
+.project-hero-text {
+    max-width: 680px;
 
-    max-width: 720px;
+    margin-bottom: 27px;
 
-    margin: 0 0 27px;
+    color: #abc3da;
 
-    color: var(--mp-muted);
-
-    font-size: 0.86rem;
-
-    line-height: 1.85;
+    font-size: .95rem;
+    line-height: 1.8;
 }
 
 
-/* TAGS */
-
-.mp-tags {
-
+.project-hero-tags {
     display: flex;
-
     flex-wrap: wrap;
 
-    gap: 8px;
+    gap: 7px;
 
-    margin-bottom: 30px;
+    margin-bottom: 27px;
 }
 
 
-.mp-tags span {
-
-    padding:
-        7px 11px;
+.project-hero-tags span {
+    padding: 5px 11px;
 
     border:
-        1px solid rgba(0, 207, 255, 0.14);
+        1px solid
+        rgba(0, 190, 255, .30);
 
-    border-radius: 999px;
+    border-radius: 50px;
 
-    background:
-        rgba(0, 207, 255, 0.025);
+    color: #a9c9e3;
 
-    color:
-        rgba(255, 255, 255, 0.6);
-
-    font-size: 0.63rem;
+    font-size: .68rem;
 }
 
 
-/* BUTTONS */
-
-.mp-actions {
-
+.project-hero-buttons {
     display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-
-    margin-bottom: 35px;
-}
-
-
-.mp-btn {
-
-    min-height: 46px;
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 18px;
-
-    padding:
-        0 20px;
-
-    border-radius: 6px;
-
-    text-decoration: none;
-
-    font-size: 0.73rem;
-
-    font-weight: 700;
-
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease;
-}
-
-
-.mp-btn:hover {
-
-    transform:
-        translateY(-2px);
-}
-
-
-.mp-btn-primary {
-
-    background:
-        var(--mp-cyan);
-
-    color:
-        #031018;
-}
-
-
-.mp-btn-secondary {
-
-    border:
-        1px solid rgba(255, 255, 255, 0.13);
-
-    color:
-        #ffffff;
-
-    background:
-        rgba(255, 255, 255, 0.02);
-}
-
-
-.mp-btn-secondary:hover {
-
-    border-color:
-        rgba(0, 207, 255, 0.4);
-}
-
-
-/* META */
-
-.mp-hero-meta {
-
-    display: flex;
-
-    gap: 22px;
-
-    color:
-        rgba(255, 255, 255, 0.42);
-
-    font-size: 0.63rem;
-
-    letter-spacing: 0.06em;
-}
-
-
-.mp-hero-meta span:not(:last-child)::after {
-
-    content: "·";
-
-    margin-left: 22px;
-
-    color:
-        var(--mp-cyan);
-}
-
-
-/* HERO LATERAL */
-
-.mp-hero-side {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-end;
-
-    gap: 11px;
-
-    padding-right: 15px;
-
-    color:
-        rgba(255, 255, 255, 0.46);
-
-    font-size: 0.61rem;
-
-    letter-spacing: 0.12em;
-}
-
-
-.hero-side-line {
-
-    width: 30px;
-
-    height: 1px;
-
-    margin: 8px 0;
-
-    background:
-        var(--mp-cyan);
+    gap: 13px;
 }
 
 
 /* =========================================================
-   GENERAL SECTIONS
+   GENERAL SECTION
 ========================================================= */
 
-.mp-section {
-
-    position: relative;
-
-    padding:
-        125px 0;
+.mercaplus-section {
+    padding: 88px 0;
 
     border-top:
-        1px solid rgba(255, 255, 255, 0.035);
+        1px solid
+        var(--border);
 }
 
 
-.mp-section-intro {
+.mercaplus-heading {
+    margin-bottom: 38px;
+}
 
+
+.mercaplus-heading h2 {
+    max-width: 850px;
+}
+
+
+.section-description {
+    max-width: 720px;
+
+    margin-top: 17px;
+
+    color: #a9bfd4;
+
+    font-size: .84rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   01 · EL PROYECTO
+========================================================= */
+
+.project-intro-grid {
     display: grid;
 
     grid-template-columns:
-        100px
-        minmax(0, 1.15fr)
-        minmax(280px, 0.75fr);
+        1.15fr
+        .85fr;
 
-    gap: 45px;
+    gap: 85px;
 
     align-items: start;
-
-    margin-bottom: 70px;
 }
 
 
-.mp-section-number {
-
-    padding-top: 8px;
-
-    color:
-        var(--mp-cyan);
-
-    font-size: 0.64rem;
-
-    font-weight: 800;
-
-    line-height: 1.5;
-
-    letter-spacing: 0.15em;
+.project-intro-copy {
+    max-width: 720px;
 }
 
 
-.mp-section-title h2 {
+.project-intro-copy p {
+    margin-bottom: 19px;
 
-    margin: 0;
+    color: #a9bfd4;
 
-    font-size:
-        clamp(3rem, 5vw, 5.2rem);
-
-    line-height: 0.95;
-
-    letter-spacing: -0.055em;
-
-    color:
-        var(--mp-white);
-}
-
-
-.mp-section-text {
-
-    padding-top: 8px;
-}
-
-
-.mp-section-text p {
-
-    margin: 0 0 17px;
-
-    color:
-        var(--mp-muted);
-
-    font-size: 0.82rem;
-
+    font-size: .9rem;
     line-height: 1.85;
 }
 
 
-.mp-section-text p:last-child {
-
+.project-intro-copy p:last-child {
     margin-bottom: 0;
 }
 
 
+.project-facts {
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+
+.project-fact {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 17px;
+
+    padding: 18px;
+
+    border-left:
+        2px solid
+        var(--cyan);
+
+    background:
+        rgba(0, 150, 220, .035);
+}
+
+
+.project-fact > span {
+    color: var(--cyan);
+
+    font-family: monospace;
+
+    font-size: .72rem;
+}
+
+
+.project-fact strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #edf5ff;
+
+    font-size: .85rem;
+}
+
+
+.project-fact small {
+    color: #829db5;
+
+    font-size: .7rem;
+}
+
+
 /* =========================================================
-   PROJECT FEATURES
+   02 · ARQUITECTURA
 ========================================================= */
 
-.mp-feature-grid {
+.architecture-section {
+    background:
+        rgba(3, 18, 31, .45);
+}
 
-    display: grid;
 
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
+.network-diagram {
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(0, 190, 255, .32);
+
+    border-radius: 7px;
+
+    background:
+        rgba(3, 23, 38, .65);
+}
+
+
+.network-diagram-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 17px 22px;
+
+    border-bottom:
+        1px solid
+        rgba(0, 190, 255, .18);
+
+    background:
+        rgba(2, 11, 22, .65);
+}
+
+
+.network-diagram-header div {
+    display: flex;
+    align-items: center;
 
     gap: 14px;
 }
 
 
-.mp-feature {
+.network-diagram-header span {
+    color: var(--cyan);
 
-    min-height: 220px;
+    font-size: .65rem;
+    font-weight: 700;
 
-    padding:
-        24px 22px;
-
-    border:
-        1px solid var(--mp-border);
-
-    border-radius: 8px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.025),
-            rgba(255, 255, 255, 0.008)
-        );
-
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease;
+    letter-spacing: .18em;
 }
 
 
-.mp-feature:hover {
+.network-diagram-header strong {
+    color: #eaf4ff;
 
-    transform:
-        translateY(-4px);
-
-    border-color:
-        rgba(0, 207, 255, 0.35);
+    font-size: .82rem;
 }
 
 
-.feature-number {
+.network-diagram-header small {
+    color: #7895ae;
 
-    display: block;
-
-    margin-bottom: 45px;
-
-    color:
-        var(--mp-cyan);
-
-    font-family:
-        "JetBrains Mono",
-        "Cascadia Code",
-        Consolas,
-        monospace;
-
-    font-size: 0.62rem;
+    font-size: .68rem;
 }
 
 
-.mp-feature h3 {
-
-    margin: 0 0 12px;
-
-    color:
-        #ffffff;
-
-    font-size: 0.92rem;
-}
-
-
-.mp-feature p {
-
-    margin: 0;
-
-    color:
-        var(--mp-muted);
-
-    font-size: 0.72rem;
-
-    line-height: 1.7;
-}
-
-
-/* =========================================================
-   ARCHITECTURE
-========================================================= */
-
-.mp-architecture {
-
-    background:
-        #030c16;
-}
-
-
-.mp-diagram {
-
-    margin-bottom: 75px;
-
-    border:
-        1px solid var(--mp-border);
-
-    border-radius: 10px;
-
-    background:
-        rgba(255, 255, 255, 0.012);
-
-    overflow: hidden;
-}
-
-
-.mp-diagram-header {
-
-    min-height: 78px;
-
+.network-image {
     display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-    padding:
-        18px 22px;
-
-    border-bottom:
-        1px solid rgba(255, 255, 255, 0.06);
-}
-
-
-.mp-diagram-header > div:first-child > span {
-
-    display: block;
-
-    margin-bottom: 6px;
-
-    color:
-        var(--mp-cyan);
-
-    font-size: 0.58rem;
-
-    font-weight: 800;
-
-    letter-spacing: 0.14em;
-}
-
-
-.mp-diagram-header h3 {
-
-    margin: 0;
-
-    color:
-        #ffffff;
-
-    font-size: 0.92rem;
-}
-
-
-.diagram-status {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    color:
-        var(--mp-cyan);
-
-    font-size: 0.58rem;
-
-    font-weight: 800;
-
-    letter-spacing: 0.1em;
-}
-
-
-.diagram-status i {
-
-    width: 6px;
-
-    height: 6px;
-
-    border-radius: 50%;
-
-    background:
-        var(--mp-cyan);
-
-    box-shadow:
-        0 0 10px rgba(0, 207, 255, 0.7);
-}
-
-
-.mp-diagram-image {
-
-    display: flex;
-
-    align-items: center;
-
     justify-content: center;
+    align-items: center;
 
-    min-height: 400px;
+    min-height: 380px;
 
     padding: 30px;
 
     background:
-        rgba(0, 5, 10, 0.5);
-
-    overflow: auto;
+        #010a14;
 }
 
 
-.mp-diagram-image img {
-
+.network-image img {
     display: block;
 
     width: 100%;
-
     max-width: 1250px;
-
     height: auto;
 
-    object-fit: contain;
-}
-
-
-.mp-diagram-caption {
-
-    padding:
-        13px 22px;
-
-    border-top:
-        1px solid rgba(255, 255, 255, 0.05);
-
-    color:
-        rgba(255, 255, 255, 0.38);
-
-    font-size: 0.65rem;
-}
-
-
-/* VLAN HEADER */
-
-.mp-subsection-header {
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 0.8fr;
-
-    gap: 50px;
-
-    align-items: end;
-
-    margin-bottom: 28px;
-}
-
-
-.mp-subsection-header > div > span {
-
-    color:
-        var(--mp-cyan);
-
-    font-size: 0.61rem;
-
-    font-weight: 800;
-
-    letter-spacing: 0.16em;
-}
-
-
-.mp-subsection-header h3 {
-
-    margin: 8px 0 0;
-
-    color:
-        var(--mp-white);
-
-    font-size:
-        clamp(2rem, 3vw, 3rem);
-
-    line-height: 1;
-
-    letter-spacing: -0.04em;
-}
-
-
-.mp-subsection-header p {
-
-    max-width: 450px;
-
-    margin: 0;
-
-    color:
-        var(--mp-muted);
-
-    font-size: 0.76rem;
-
-    line-height: 1.75;
-}
-
-
-/* VLAN GRID */
-
-.mp-vlan-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(5, minmax(0, 1fr));
-
-    gap: 10px;
-}
-
-
-.mp-vlan {
-
-    min-height: 190px;
-
-    padding:
-        20px 17px;
-
     border:
-        1px solid rgba(0, 207, 255, 0.12);
-
-    border-radius: 7px;
-
-    background:
-        rgba(255, 255, 255, 0.012);
-
-    transition:
-        border-color 0.2s ease,
-        transform 0.2s ease;
-}
-
-
-.mp-vlan:hover {
-
-    transform:
-        translateY(-3px);
-
-    border-color:
-        rgba(0, 207, 255, 0.3);
-}
-
-
-.vlan-top {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 10px;
-
-    margin-bottom: 35px;
-}
-
-
-.vlan-top span:first-child {
-
-    color:
-        var(--mp-cyan);
-
-    font-family:
-        "JetBrains Mono",
-        "Cascadia Code",
-        Consolas,
-        monospace;
-
-    font-size: 0.59rem;
-}
-
-
-.vlan-top span:last-child {
-
-    color:
-        rgba(255, 255, 255, 0.3);
-
-    font-size: 0.53rem;
-
-    letter-spacing: 0.08em;
-}
-
-
-.mp-vlan h4 {
-
-    margin: 0 0 13px;
-
-    color:
-        #ffffff;
-
-    font-size: 0.9rem;
-}
-
-
-.mp-vlan code {
-
-    display: inline-block;
-
-    margin-bottom: 15px;
-
-    padding:
-        5px 7px;
+        1px solid
+        rgba(0, 190, 255, .12);
 
     border-radius: 4px;
-
-    background:
-        rgba(0, 0, 0, 0.2);
-
-    color:
-        #9cecff;
-
-    font-family:
-        "JetBrains Mono",
-        "Cascadia Code",
-        Consolas,
-        monospace;
-
-    font-size: 0.56rem;
-}
-
-
-.mp-vlan p {
-
-    margin: 0;
-
-    color:
-        var(--mp-muted);
-
-    font-size: 0.65rem;
-
-    line-height: 1.6;
 }
 
 
 /* =========================================================
-   SERVERS
+   VLAN
 ========================================================= */
 
-.mp-server-list {
-
-    border-top:
-        1px solid rgba(255, 255, 255, 0.07);
-}
-
-
-.mp-server {
-
+.architecture-info {
     display: grid;
 
     grid-template-columns:
-        70px
-        minmax(260px, 0.9fr)
-        1.2fr;
+        .85fr
+        1.15fr;
 
-    gap: 35px;
+    gap: 80px;
 
-    padding:
-        35px 0;
+    margin-top: 65px;
 
-    border-bottom:
-        1px solid rgba(255, 255, 255, 0.07);
-
-    transition:
-        padding-left 0.2s ease;
+    align-items: start;
 }
 
 
-.mp-server:hover {
+.architecture-copy h3 {
+    margin-bottom: 14px;
 
-    padding-left:
-        8px;
+    font-size: 1.45rem;
+
+    line-height: 1.2;
 }
 
 
-.server-id {
-
-    color:
-        var(--mp-cyan);
-
-    font-family:
-        "JetBrains Mono",
-        "Cascadia Code",
-        Consolas,
-        monospace;
-
-    font-size: 0.63rem;
-}
-
-
-.server-main > span {
-
-    display: block;
-
-    margin-bottom: 9px;
-
-    color:
-        var(--mp-cyan);
-
-    font-size: 0.57rem;
-
-    font-weight: 800;
-
-    letter-spacing: 0.1em;
-}
-
-
-.server-main h3 {
-
-    margin: 0 0 7px;
-
-    color:
-        #ffffff;
-
-    font-family:
-        "JetBrains Mono",
-        "Cascadia Code",
-        Consolas,
-        monospace;
-
-    font-size: 1.4rem;
-}
-
-
-.server-main strong {
-
-    display: block;
-
-    margin-bottom: 9px;
-
-    color:
-        var(--mp-text);
-
-    font-size: 0.75rem;
-
-    font-weight: 500;
-}
-
-
-.server-main code {
-
-    color:
-        rgba(255, 255, 255, 0.4);
-
-    font-family:
-        "JetBrains Mono",
-        "Cascadia Code",
-        Consolas,
-        monospace;
-
-    font-size: 0.62rem;
-}
-
-
-.server-description {
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
-
-    gap: 22px;
-}
-
-
-.server-description p {
-
+.architecture-copy > p:last-child {
     max-width: 600px;
 
-    margin: 0;
+    color: #9eb8d0;
 
-    color:
-        var(--mp-muted);
-
-    font-size: 0.75rem;
-
+    font-size: .82rem;
     line-height: 1.75;
 }
 
 
-.server-tags {
+.vlan-list {
+    display: grid;
 
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 11px;
+}
+
+
+.vlan-item {
     display: flex;
+    align-items: center;
 
+    gap: 15px;
+
+    padding: 15px 17px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 6px;
+
+    background:
+        rgba(3, 23, 38, .55);
+
+    transition:
+        border-color .2s ease,
+        transform .2s ease;
+}
+
+
+.vlan-item:hover {
+    border-color: var(--cyan);
+
+    transform: translateY(-2px);
+}
+
+
+.vlan-item > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid
+        rgba(0, 200, 255, .35);
+
+    border-radius: 5px;
+
+    color: var(--cyan);
+
+    font-family: monospace;
+
+    font-size: .72rem;
+}
+
+
+.vlan-item strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #eaf4ff;
+
+    font-size: .76rem;
+}
+
+
+.vlan-item small {
+    color: #7895ae;
+
+    font-size: .65rem;
+}
+
+
+/* =========================================================
+   03 · INFRAESTRUCTURA
+========================================================= */
+
+.infrastructure-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+.technical-card {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    min-height: 190px;
+
+    padding: 25px;
+
+    border:
+        1px solid
+        rgba(0, 190, 255, .30);
+
+    border-radius: 7px;
+
+    background:
+        rgba(3, 23, 38, .65);
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.technical-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--cyan);
+
+    box-shadow:
+        0 14px 35px
+        rgba(0, 180, 255, .10);
+}
+
+
+.technical-number {
+    color: var(--cyan);
+
+    font-family: monospace;
+
+    font-size: .72rem;
+
+    padding-top: 2px;
+}
+
+
+.technical-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 1.05rem;
+}
+
+
+.technical-card p {
+    margin-bottom: 17px;
+
+    color: #9eb8d0;
+
+    font-size: .76rem;
+    line-height: 1.7;
+}
+
+
+.technical-tags {
+    display: flex;
     flex-wrap: wrap;
 
     gap: 6px;
 }
 
 
-.server-tags span {
-
-    padding:
-        5px 8px;
+.technical-tags span {
+    padding: 4px 8px;
 
     border:
-        1px solid rgba(255, 255, 255, 0.08);
+        1px solid
+        rgba(0, 190, 255, .25);
 
-    border-radius: 4px;
+    border-radius: 50px;
 
-    color:
-        rgba(255, 255, 255, 0.5);
+    color: #91b6d2;
 
-    font-size: 0.57rem;
+    font-size: .62rem;
 }
 
 
 /* =========================================================
-   TECHNOLOGIES
+   04 · TECNOLOGÍAS
 ========================================================= */
 
-.mp-tech-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
-
-    border-top:
-        1px solid rgba(255, 255, 255, 0.07);
-
-    border-left:
-        1px solid rgba(255, 255, 255, 0.07);
+.technologies-section {
+    background:
+        rgba(3, 18, 31, .35);
 }
 
 
-.mp-tech {
-
-    min-height: 130px;
-
+.technology-list {
     display: flex;
-
     flex-direction: column;
 
-    justify-content: center;
-
-    padding:
-        25px;
-
-    border-right:
-        1px solid rgba(255, 255, 255, 0.07);
-
-    border-bottom:
-        1px solid rgba(255, 255, 255, 0.07);
-}
-
-
-.mp-tech strong {
-
-    margin-bottom: 7px;
-
-    color:
-        #ffffff;
-
-    font-size: 0.82rem;
-}
-
-
-.mp-tech span {
-
-    color:
-        var(--mp-muted);
-
-    font-size: 0.63rem;
-}
-
-
-/* =========================================================
-   SERVICES
-========================================================= */
-
-.mp-service-list {
-
     border-top:
-        1px solid rgba(255, 255, 255, 0.07);
+        1px solid
+        rgba(0, 190, 255, .16);
 }
 
 
-.mp-service-row {
-
+.technology-row {
     display: grid;
 
-    grid-template-columns:
-        50px
-        1.1fr
-        1fr
-        0.8fr;
+    grid-template-columns: 60px 1fr;
 
-    align-items: center;
+    gap: 20px;
 
-    gap: 25px;
-
-    min-height: 70px;
+    padding: 22px 5px;
 
     border-bottom:
-        1px solid rgba(255, 255, 255, 0.06);
+        1px solid
+        rgba(0, 190, 255, .12);
 }
 
 
-.mp-service-row > span:first-child {
+.technology-row > span {
+    color: var(--cyan);
 
-    color:
-        var(--mp-cyan);
+    font-family: monospace;
 
-    font-family:
-        "JetBrains Mono",
-        "Cascadia Code",
-        Consolas,
-        monospace;
-
-    font-size: 0.6rem;
+    font-size: .72rem;
 }
 
 
-.mp-service-row strong {
+.technology-row strong {
+    display: block;
 
-    color:
-        #ffffff;
+    margin-bottom: 5px;
 
-    font-size: 0.75rem;
+    color: #eaf4ff;
+
+    font-size: .88rem;
 }
 
 
-.mp-service-row span:nth-child(3) {
+.technology-row p {
+    color: #8faac2;
 
-    color:
-        rgba(255, 255, 255, 0.45);
+    font-size: .74rem;
 
-    font-family:
-        "JetBrains Mono",
-        "Cascadia Code",
-        Consolas,
-        monospace;
-
-    font-size: 0.59rem;
-}
-
-
-.mp-service-row p {
-
-    margin: 0;
-
-    color:
-        var(--mp-muted);
-
-    font-size: 0.65rem;
+    line-height: 1.65;
 }
 
 
 /* =========================================================
-   TIMELINE
+   05 · SERVICIOS
 ========================================================= */
 
-.mp-timeline {
-
-    max-width: 1000px;
-
-    margin: 0 auto;
-}
-
-
-.mp-timeline article {
-
-    position: relative;
-
+.services-grid {
     display: grid;
 
     grid-template-columns:
-        55px
-        1fr;
+        repeat(4, 1fr);
 
-    gap: 30px;
-
-    padding-bottom: 42px;
+    gap: 16px;
 }
 
 
-.mp-timeline article::before {
+.service-block {
+    min-height: 190px;
 
-    content: "";
-
-    position: absolute;
-
-    top: 29px;
-    left: 13px;
-
-    width: 1px;
-
-    height: calc(100% - 8px);
-
-    background:
-        rgba(0, 207, 255, 0.15);
-}
-
-
-.mp-timeline article:last-child::before {
-
-    display: none;
-}
-
-
-.mp-timeline article > span {
-
-    position: relative;
-
-    z-index: 2;
-
-    width: 28px;
-    height: 28px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
+    padding: 22px;
 
     border:
-        1px solid rgba(0, 207, 255, 0.25);
+        1px solid
+        var(--border);
 
-    border-radius: 50%;
+    border-radius: 7px;
 
     background:
-        #020a13;
+        rgba(3, 23, 38, .55);
 
-    color:
-        var(--mp-cyan);
-
-    font-family:
-        "JetBrains Mono",
-        "Cascadia Code",
-        Consolas,
-        monospace;
-
-    font-size: 0.55rem;
+    transition:
+        transform .2s ease,
+        border-color .2s ease;
 }
 
 
-.mp-timeline h3 {
+.service-block:hover {
+    transform: translateY(-3px);
 
-    margin: 3px 0 8px;
-
-    color:
-        #ffffff;
-
-    font-size: 0.9rem;
+    border-color:
+        rgba(0, 200, 255, .55);
 }
 
 
-.mp-timeline p {
+.service-block > span {
+    display: block;
 
+    margin-bottom: 25px;
+
+    color: var(--cyan);
+
+    font-family: monospace;
+
+    font-size: .68rem;
+}
+
+
+.service-block h3 {
+    margin-bottom: 9px;
+
+    font-size: .92rem;
+}
+
+
+.service-block p {
+    color: #8faac2;
+
+    font-size: .72rem;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   06 · IMPLEMENTACIÓN
+========================================================= */
+
+.implementation-section {
+    background:
+        rgba(3, 18, 31, .45);
+}
+
+
+.implementation-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 85px;
+
+    align-items: start;
+}
+
+
+.implementation-grid h2 {
     max-width: 650px;
 
-    margin: 0;
+    margin-bottom: 20px;
 
-    color:
-        var(--mp-muted);
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3rem
+        );
 
-    font-size: 0.72rem;
+    line-height: 1.1;
+}
 
-    line-height: 1.7;
+
+.implementation-text {
+    max-width: 680px;
+
+    margin-bottom: 17px;
+
+    color: #a5bdd3;
+
+    font-size: .84rem;
+
+    line-height: 1.8;
+}
+
+
+.implementation-points {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.implementation-point {
+    display: flex;
+
+    gap: 18px;
+
+    padding: 18px;
+
+    border-left:
+        2px solid
+        var(--cyan);
+
+    background:
+        rgba(0, 150, 220, .035);
+}
+
+
+.implementation-point > span {
+    color: var(--cyan);
+
+    font-family: monospace;
+
+    font-size: .7rem;
+}
+
+
+.implementation-point strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: .84rem;
+}
+
+
+.implementation-point p {
+    color: #849fb8;
+
+    font-size: .7rem;
+
+    line-height: 1.6;
 }
 
 
@@ -1558,109 +870,72 @@
    DOCUMENTACIÓN
 ========================================================= */
 
-.mp-documentation {
-
-    background:
-        #030c16;
+.documentation-project-section {
+    border-top:
+        1px solid
+        var(--border);
 }
 
 
-.mp-doc-grid {
+.documentation-project-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    display: grid;
+    gap: 30px;
 
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 14px;
-}
-
-
-.mp-doc {
-
-    min-height: 260px;
-
-    padding:
-        26px;
+    padding: 27px;
 
     border:
-        1px solid var(--mp-border);
+        1px solid
+        rgba(0, 190, 255, .30);
 
-    border-radius: 8px;
+    border-radius: 7px;
 
     background:
-        rgba(255, 255, 255, 0.012);
-
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease;
+        rgba(3, 23, 38, .60);
 }
 
 
-.mp-doc:hover {
+.documentation-project-copy {
+    display: flex;
+    align-items: flex-start;
 
-    transform:
-        translateY(-4px);
-
-    border-color:
-        rgba(0, 207, 255, 0.32);
+    gap: 18px;
 }
 
 
-.doc-type {
+.documentation-project-icon {
+    color: var(--cyan);
 
-    margin-bottom: 42px;
-
-    color:
-        var(--mp-cyan);
-
-    font-family:
-        "JetBrains Mono",
-        "Cascadia Code",
-        Consolas,
-        monospace;
-
-    font-size: 0.59rem;
-
-    font-weight: 800;
+    font-size: 1.7rem;
 }
 
 
-.mp-doc h3 {
+.documentation-project-copy h3 {
+    margin-bottom: 7px;
 
-    margin: 0 0 12px;
-
-    color:
-        #ffffff;
-
-    font-size: 1rem;
+    font-size: .95rem;
 }
 
 
-.mp-doc p {
+.documentation-project-copy p {
+    max-width: 650px;
 
-    max-width: 330px;
+    color: #91abc2;
 
-    margin: 0 0 25px;
+    font-size: .74rem;
 
-    color:
-        var(--mp-muted);
-
-    font-size: 0.7rem;
-
-    line-height: 1.75;
+    line-height: 1.65;
 }
 
 
-.mp-doc a {
+.documentation-project-status {
+    flex-shrink: 0;
 
-    color:
-        var(--mp-cyan);
+    color: var(--cyan);
 
-    text-decoration: none;
-
-    font-size: 0.66rem;
-
+    font-size: .72rem;
     font-weight: 700;
 }
 
@@ -1669,685 +944,262 @@
    RESULTADO
 ========================================================= */
 
-.mp-result {
-
-    padding:
-        110px 0;
-
-    background:
-        #020a13;
+.mercaplus-result {
+    padding: 75px 0;
 }
 
 
-.mp-result-box {
-
-    display: grid;
-
-    grid-template-columns:
-        1fr auto;
-
-    gap: 70px;
-
-    align-items: center;
-
-    padding:
-        55px;
-
-    border:
-        1px solid rgba(0, 207, 255, 0.22);
-
-    border-radius: 9px;
-
-    background:
-        radial-gradient(
-            circle at 85% 50%,
-            rgba(0, 207, 255, 0.055),
-            transparent 35%
-        ),
-
-        #04111d;
-}
-
-
-.mp-result-box > div:first-child > span {
-
-    color:
-        var(--mp-cyan);
-
-    font-size: 0.61rem;
-
-    font-weight: 800;
-
-    letter-spacing: 0.18em;
-}
-
-
-.mp-result-box h2 {
-
-    max-width: 700px;
-
-    margin:
-        12px 0 18px;
-
-    color:
-        var(--mp-white);
-
-    font-size:
-        clamp(2.6rem, 5vw, 4.5rem);
-
-    line-height: 0.98;
-
-    letter-spacing: -0.05em;
-}
-
-
-.mp-result-box p {
-
-    max-width: 650px;
-
-    margin: 0;
-
-    color:
-        var(--mp-muted);
-
-    font-size: 0.78rem;
-
-    line-height: 1.8;
-}
-
-
-.mp-result-stats {
-
+.result-box {
     display: flex;
-
-    gap: 42px;
-}
-
-
-.mp-result-stats div {
-
-    display: flex;
-
-    flex-direction: column;
-}
-
-
-.mp-result-stats strong {
-
-    color:
-        var(--mp-cyan);
-
-    font-size: 2.2rem;
-
-    line-height: 1;
-}
-
-
-.mp-result-stats span {
-
-    margin-top: 7px;
-
-    color:
-        rgba(255, 255, 255, 0.42);
-
-    font-size: 0.6rem;
-}
-
-
-/* =========================================================
-   BACK
-========================================================= */
-
-.mp-back {
-
-    padding:
-        20px 0 100px;
-}
-
-
-.mp-back a {
-
-    display: inline-flex;
-
     align-items: center;
-
-    padding:
-        11px 15px;
-
-    border:
-        1px solid rgba(255, 255, 255, 0.08);
-
-    border-radius: 6px;
-
-    color:
-        rgba(255, 255, 255, 0.55);
-
-    text-decoration: none;
-
-    font-size: 0.68rem;
-
-    transition:
-        color 0.2s ease,
-        border-color 0.2s ease;
-}
-
-
-.mp-back a:hover {
-
-    color:
-        var(--mp-cyan);
-
-    border-color:
-        rgba(0, 207, 255, 0.25);
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.site-footer {
-
-    border-top:
-        1px solid rgba(255, 255, 255, 0.06);
-
-    background:
-        #020a13;
-}
-
-
-.site-footer .footer-inner {
-
-    min-height: 90px;
-
-    display: flex;
-
-    align-items: center;
-
     justify-content: space-between;
 
-    gap: 20px;
+    gap: 50px;
 
-    color:
-        rgba(255, 255, 255, 0.35);
+    padding: 45px;
 
-    font-size: 0.63rem;
+    border:
+        1px solid
+        rgba(0, 190, 255, .35);
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(0, 100, 160, .12),
+            rgba(3, 23, 38, .60)
+        );
+}
+
+
+.result-box h2 {
+    max-width: 760px;
+
+    margin-bottom: 15px;
+
+    font-size:
+        clamp(
+            1.8rem,
+            3vw,
+            2.5rem
+        );
+
+    line-height: 1.15;
+}
+
+
+.result-box > div > p:last-child {
+    max-width: 720px;
+
+    color: #a1bad0;
+
+    font-size: .8rem;
+
+    line-height: 1.75;
 }
 
 
 /* =========================================================
-   RESPONSIVE
+   RESPONSIVE · TABLET
 ========================================================= */
 
-@media (max-width: 1200px) {
+@media (max-width: 1180px) {
 
-
-    .site-header .main-nav {
-
-        gap: 18px;
-
+    .project-hero {
+        min-height: 560px;
     }
 
 
-    .header-extra {
-
-        gap: 12px;
-
-    }
-
-
-    .header-pill {
-
-        padding: 0 13px;
-
-    }
-
-
-    .mp-section-intro {
-
-        grid-template-columns:
-            80px
-            1fr
-            0.75fr;
-
-        gap: 30px;
-
-    }
-
-
-    .mp-feature-grid {
-
+    .services-grid {
         grid-template-columns:
             repeat(2, 1fr);
-
     }
 
 
-    .mp-vlan-grid {
-
-        grid-template-columns:
-            repeat(3, 1fr);
-
+    .project-intro-grid,
+    .architecture-info,
+    .implementation-grid {
+        gap: 55px;
     }
 
 }
 
 
-@media (max-width: 1000px) {
+/* =========================================================
+   RESPONSIVE · TABLET / MÓVIL
+========================================================= */
 
+@media (max-width: 820px) {
 
-    .site-header .main-nav {
+    .project-hero {
+        min-height: 650px;
 
-        display: none;
-
+        padding-top: 68px;
     }
 
 
-    .site-header .header-inner {
+    .project-hero-inner {
+        min-height: 582px;
 
-        justify-content: space-between;
-
+        align-items: center;
     }
 
 
-    .header-extra {
-
-        margin-left: auto;
-
+    .project-hero h1 {
+        font-size:
+            clamp(
+                3.3rem,
+                13vw,
+                5rem
+            );
     }
 
 
-    .mp-hero-side {
-
-        display: none;
-
+    .project-hero-buttons {
+        flex-wrap: wrap;
     }
 
 
-    .mp-section-intro {
+    .project-intro-grid,
+    .architecture-info,
+    .implementation-grid {
+        grid-template-columns: 1fr;
 
-        grid-template-columns:
-            80px
-            1fr;
-
+        gap: 45px;
     }
 
 
-    .mp-section-text {
-
-        grid-column:
-            2;
-
+    .infrastructure-grid {
+        grid-template-columns: 1fr;
     }
 
 
-    .mp-server {
-
-        grid-template-columns:
-            55px
-            1fr;
-
-    }
-
-
-    .server-description {
-
-        grid-column:
-            2;
-
-    }
-
-
-    .mp-tech-grid {
-
+    .services-grid {
         grid-template-columns:
             repeat(2, 1fr);
-
     }
 
 
-    .mp-service-row {
-
-        grid-template-columns:
-            40px
-            1fr
-            1fr;
-
-    }
-
-
-    .mp-service-row p {
-
-        display: none;
-
-    }
-
-
-    .mp-result-box {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .mp-result-stats {
-
-        margin-top: 10px;
-
-    }
-
-}
-
-
-@media (max-width: 700px) {
-
-
-    .site-header .header-extra {
-
-        display: none;
-
-    }
-
-
-    .site-header .brand img {
-
-        width: 38px !important;
-        height: 38px !important;
-
-        max-width: 38px !important;
-        max-height: 38px !important;
-
-    }
-
-
-    .site-header .brand span {
-
-        font-size: 0.9rem;
-
-    }
-
-
-    .mp-hero {
-
-        min-height: 580px;
-
-    }
-
-
-    .mp-hero .container {
-
-        min-height: 580px;
-
-    }
-
-
-    .mp-hero-content {
-
-        padding:
-            70px 0 80px;
-
-    }
-
-
-    .mp-hero h1 {
-
-        font-size:
-            clamp(4rem, 18vw, 6rem);
-
-    }
-
-
-    .mp-hero h2 {
-
-        font-size: 1.15rem;
-
-    }
-
-
-    .mp-hero-description {
-
-        font-size: 0.78rem;
-
-    }
-
-
-    .mp-section {
-
-        padding:
-            85px 0;
-
-    }
-
-
-    .mp-section-intro {
-
-        display: block;
-
-        margin-bottom: 45px;
-
-    }
-
-
-    .mp-section-number {
-
-        margin-bottom: 18px;
-
-    }
-
-
-    .mp-section-title h2 {
-
-        font-size:
-            clamp(2.7rem, 12vw, 4rem);
-
-    }
-
-
-    .mp-section-text {
-
-        margin-top: 25px;
-
-    }
-
-
-    .mp-feature-grid {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .mp-vlan-grid {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .mp-subsection-header {
-
-        grid-template-columns:
-            1fr;
-
-        gap: 20px;
-
-    }
-
-
-    .mp-diagram {
-
-        margin-bottom: 55px;
-
-    }
-
-
-    .mp-diagram-header {
-
-        align-items: flex-start;
-
-        flex-direction: column;
-
-    }
-
-
-    .mp-diagram-image {
-
-        justify-content: flex-start;
-
+    .network-image {
         padding: 15px;
 
-        overflow-x: auto;
-
+        min-height: auto;
     }
 
 
-    .mp-diagram-image img {
-
-        min-width: 700px;
-
-    }
-
-
-    .mp-server {
-
-        grid-template-columns:
-            40px
-            1fr;
-
-        gap: 20px;
-
-        padding:
-            28px 0;
-
-    }
-
-
-    .server-description {
-
-        grid-column:
-            2;
-
-    }
-
-
-    .mp-tech-grid {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .mp-service-row {
-
-        grid-template-columns:
-            35px
-            1fr;
-
-        gap: 10px;
-
-        padding:
-            15px 0;
-
-    }
-
-
-    .mp-service-row span:nth-child(3) {
-
-        grid-column:
-            2;
-
-    }
-
-
-    .mp-doc-grid {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .mp-result {
-
-        padding:
-            80px 0;
-
-    }
-
-
-    .mp-result-box {
-
-        padding:
-            32px 24px;
-
-    }
-
-
-    .mp-result-stats {
-
-        gap: 25px;
-
-    }
-
-
-    .site-footer .footer-inner {
-
-        min-height: 100px;
-
+    .network-diagram-header {
+        align-items: flex-start;
         flex-direction: column;
 
-        justify-content: center;
+        gap: 8px;
+    }
 
-        text-align: center;
 
+    .documentation-project-box {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .result-box {
+        align-items: flex-start;
+        flex-direction: column;
     }
 
 }
 
 
-@media (max-width: 450px) {
+/* =========================================================
+   RESPONSIVE · MÓVIL
+========================================================= */
 
+@media (max-width: 560px) {
 
-    .mp-hero-meta {
-
-        flex-wrap: wrap;
-
-        gap: 8px;
-
+    .mercaplus-section {
+        padding: 65px 0;
     }
 
 
-    .mp-hero-meta span:not(:last-child)::after {
-
-        margin-left: 8px;
-
+    .project-hero {
+        min-height: 680px;
     }
 
 
-    .mp-actions {
+    .project-hero-inner {
+        min-height: 610px;
+    }
 
+
+    .project-hero h1 {
+        font-size:
+            clamp(
+                2.9rem,
+                16vw,
+                4rem
+            );
+    }
+
+
+    .project-hero h2 {
+        font-size: 1.1rem;
+    }
+
+
+    .project-hero-text {
+        font-size: .86rem;
+    }
+
+
+    .project-hero-buttons {
         flex-direction: column;
-
-        align-items: flex-start;
-
+        align-items: stretch;
     }
 
 
-    .mp-btn {
-
+    .project-hero-buttons .button {
         width: 100%;
-
     }
 
 
-    .mp-result-stats {
+    .vlan-list {
+        grid-template-columns: 1fr;
+    }
 
-        flex-wrap: wrap;
 
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .technology-row {
+        grid-template-columns:
+            40px
+            1fr;
+
+        gap: 13px;
+    }
+
+
+    .technical-card {
+        padding: 20px;
+
+        gap: 14px;
+    }
+
+
+    .result-box {
+        padding: 30px;
+    }
+
+
+    .documentation-project-box {
+        padding: 22px;
+    }
+
+
+    .documentation-project-status {
+        white-space: normal;
     }
 
 }

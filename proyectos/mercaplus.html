@@ -2,117 +2,117 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>MercaPlus · Rincón de Lupi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta
         name="description"
-        content="MercaPlus · Diseño e implementación de una infraestructura informática corporativa completa."
+        content="MercaPlus — Proyecto final de Grado Superior sobre el diseño e implementación de una infraestructura informática corporativa completa."
     >
 
-    <link
-        rel="stylesheet"
-        href="../css/styles.css"
-    >
+    <meta name="theme-color" content="#020b16">
 
-    <link
-        rel="stylesheet"
-        href="../css/mercaplus.css"
-    >
+    <title>MercaPlus | Rincón de Lupi</title>
 
+    <!-- Sistema de diseño principal -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Estilos específicos de MercaPlus -->
+    <link rel="stylesheet" href="../css/mercaplus.css">
 </head>
-
 
 <body>
 
+    <!-- =========================================
+         HEADER
+    ========================================= -->
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
+    <header class="site-header" id="top">
 
-<header class="site-header" id="top">
-
-    <div class="container header-inner">
-
-
-        <!-- LOGO -->
-
-        <a
-            href="../index.html"
-            class="brand"
-            aria-label="Rincón de Lupi"
-        >
-
-            <img
-                src="../assets/images/logo/lupi.png"
-                alt="Lupi"
-            >
-
-            <span>LUPI</span>
-
-        </a>
-
-
-        <!-- NAVEGACIÓN -->
-
-        <nav class="main-nav">
-
-            <a href="../index.html#inicio">
-                Inicio
-            </a>
+        <div class="container header-inner">
 
             <a
-                href="../index.html#proyectos"
-                class="active"
+                class="brand"
+                href="../index.html"
+                aria-label="Rincón de Lupi"
             >
-                Proyectos
+                <img
+                    src="../assets/images/logo/lupi.png"
+                    alt="Lupi"
+                >
+
+                <span>LUPI</span>
             </a>
 
-            <a href="../index.html#documentacion">
-                Documentación
-            </a>
 
-            <a href="../index.html#sobre-mi">
-                Sobre mí
-            </a>
-
-            <a href="../index.html#cv">
-                CV
-            </a>
-
-            <a href="../index.html#contacto">
-                Contacto
-            </a>
-
-        </nav>
+            <button
+                class="menu-toggle"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
 
-        <!-- PARTE DERECHA -->
+            <nav
+                class="main-nav"
+                aria-label="Navegación principal"
+            >
 
-        <div class="header-extra">
+                <a href="../index.html">
+                    Inicio
+                </a>
 
-            <div class="header-socials">
+                <a
+                    href="../index.html#proyectos"
+                    class="active"
+                >
+                    Proyectos
+                </a>
+
+                <a href="../index.html#documentacion">
+                    Documentación
+                </a>
+
+                <a href="../index.html#sobre-mi">
+                    Sobre mí
+                </a>
+
+                <a href="../index.html#cv">
+                    CV
+                </a>
+
+                <a href="../index.html#contacto">
+                    Contacto
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
 
                 <a
                     href="https://github.com/prapersam"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="GitHub"
                 >
                     GH
                 </a>
 
-                <a href="#" aria-label="LinkedIn">
+                <a
+                    href="#"
+                    aria-label="LinkedIn"
+                >
                     in
                 </a>
 
-                <a href="#" aria-label="Contacto">
+                <a
+                    href="mailto:contacto@rincondelupi.com"
+                    aria-label="Correo"
+                >
                     @
                 </a>
 
@@ -125,1644 +125,1131 @@
 
         </div>
 
-    </div>
-
-</header>
+    </header>
 
 
+    <main>
 
-<main>
+        <!-- =========================================
+             HERO
+        ========================================= -->
+
+        <section class="project-hero">
+
+            <div class="project-hero-grid">
+
+                <div class="container project-hero-inner">
+
+                    <div class="project-hero-copy">
+
+                        <p class="section-eyebrow">
+                            PROYECTO · TFG
+                        </p>
 
 
-<!-- =========================================================
-     HERO
-========================================================= -->
-
-<section class="mp-hero" id="inicio">
-
-    <div class="mp-hero-grid"></div>
-
-    <div class="container">
-
-        <div class="mp-hero-content">
+                        <h1>
+                            Merca<span>Plus</span>
+                        </h1>
 
 
-            <div class="mp-kicker">
+                        <h2>
+                            Infraestructura informática corporativa
+                        </h2>
+
+
+                        <p class="project-hero-text">
+                            Diseño e implementación de una infraestructura
+                            informática completa para un supermercado,
+                            integrando redes, servidores, servicios,
+                            seguridad, ERP y monitorización.
+                        </p>
+
+
+                        <div class="project-hero-tags">
+
+                            <span>pfSense</span>
+                            <span>VLAN</span>
+                            <span>Windows Server</span>
+                            <span>Debian</span>
+                            <span>Samba</span>
+                            <span>Odoo</span>
+                            <span>Zabbix</span>
+
+                        </div>
+
+
+                        <div class="project-hero-buttons">
+
+                            <a
+                                href="#arquitectura"
+                                class="button button-primary"
+                            >
+                                Explorar proyecto
+                                <span>↓</span>
+                            </a>
+
+                            <a
+                                href="../index.html#proyectos"
+                                class="button button-secondary"
+                            >
+                                ← Proyectos
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             01 · EL PROYECTO
+        ========================================= -->
+
+        <section class="mercaplus-section project-intro">
+
+            <div class="container">
+
+                <div class="section-heading mercaplus-heading">
+
+                    <div>
+
+                        <p class="section-eyebrow">
+                            01 · EL PROYECTO
+                        </p>
+
+                        <h2>
+                            Una infraestructura completa,
+                            diseñada desde cero.
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-intro-grid">
+
+                    <div class="project-intro-copy">
+
+                        <p>
+                            MercaPlus es un proyecto final de Grado Superior
+                            centrado en el diseño e implementación de una
+                            infraestructura informática corporativa completa
+                            para un supermercado.
+                        </p>
+
+                        <p>
+                            El proyecto integra diferentes áreas de la
+                            administración de sistemas: redes, servidores,
+                            servicios de infraestructura, seguridad,
+                            aplicaciones empresariales, monitorización y
+                            copias de seguridad.
+                        </p>
+
+                        <p>
+                            El objetivo es plantear una infraestructura en
+                            la que los diferentes componentes formen parte
+                            de un mismo entorno tecnológico.
+                        </p>
+
+                    </div>
+
+
+                    <div class="project-facts">
+
+                        <div class="project-fact">
+
+                            <span>01</span>
+
+                            <div>
+                                <strong>Proyecto</strong>
+                                <small>Trabajo Final de Grado Superior</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-fact">
+
+                            <span>02</span>
+
+                            <div>
+                                <strong>Área</strong>
+                                <small>Sistemas e infraestructura IT</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-fact">
+
+                            <span>03</span>
+
+                            <div>
+                                <strong>Entorno</strong>
+                                <small>Infraestructura virtualizada</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-fact">
+
+                            <span>04</span>
+
+                            <div>
+                                <strong>Enfoque</strong>
+                                <small>Diseño, implementación y documentación</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             02 · ARQUITECTURA
+        ========================================= -->
+
+        <section
+            class="mercaplus-section architecture-section"
+            id="arquitectura"
+        >
+
+            <div class="container">
+
+                <div class="section-heading mercaplus-heading">
+
+                    <div>
+
+                        <p class="section-eyebrow">
+                            02 · ARQUITECTURA
+                        </p>
+
+                        <h2>
+                            Arquitectura de red.
+                        </h2>
+
+                        <p class="section-description">
+                            La infraestructura se organiza mediante una
+                            arquitectura de red segmentada y diferentes
+                            zonas destinadas a los distintos servicios
+                            y funciones de la organización.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DIAGRAMA -->
+
+                <div class="network-diagram">
+
+                    <div class="network-diagram-header">
+
+                        <div>
+
+                            <span>
+                                DIAGRAMA DE INFRAESTRUCTURA
+                            </span>
+
+                            <strong>
+                                MercaPlus
+                            </strong>
+
+                        </div>
+
+                        <small>
+                            Arquitectura de red
+                        </small>
+
+                    </div>
+
+
+                    <div class="network-image">
+
+                        <img
+                            src="../assets/images/projects/mercaplus/MercaPlus%20by%20LupiX%20-%20Proyecto%20final%20de%20Grado%20Superior.png"
+                            alt="Diagrama de red e infraestructura del proyecto MercaPlus"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- VLAN -->
+
+                <div class="architecture-info">
+
+                    <div class="architecture-copy">
+
+                        <p class="section-eyebrow">
+                            SEGMENTACIÓN
+                        </p>
+
+                        <h3>
+                            VLANs y separación de servicios.
+                        </h3>
+
+                        <p>
+                            La infraestructura contempla diferentes VLANs
+                            para separar las funciones de la red y organizar
+                            los distintos entornos de trabajo y servicios.
+                        </p>
+
+                    </div>
+
+
+                    <div class="vlan-list">
+
+                        <div class="vlan-item">
+
+                            <span>10</span>
+
+                            <div>
+                                <strong>LAN · Sistemas</strong>
+                                <small>Administración</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="vlan-item">
+
+                            <span>20</span>
+
+                            <div>
+                                <strong>DMZ</strong>
+                                <small>Servicios expuestos</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="vlan-item">
+
+                            <span>30</span>
+
+                            <div>
+                                <strong>TPV</strong>
+                                <small>Terminales TPV</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="vlan-item">
+
+                            <span>40</span>
+
+                            <div>
+                                <strong>OFICINA</strong>
+                                <small>Equipos de oficina</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="vlan-item">
+
+                            <span>50</span>
+
+                            <div>
+                                <strong>CPD</strong>
+                                <small>Centro de procesamiento de datos</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             03 · INFRAESTRUCTURA
+        ========================================= -->
+
+        <section class="mercaplus-section infrastructure-section">
+
+            <div class="container">
+
+                <div class="section-heading mercaplus-heading">
+
+                    <div>
+
+                        <p class="section-eyebrow">
+                            03 · INFRAESTRUCTURA
+                        </p>
+
+                        <h2>
+                            Sistemas y servidores.
+                        </h2>
+
+                        <p class="section-description">
+                            Diferentes plataformas y servidores forman la
+                            infraestructura necesaria para proporcionar los
+                            servicios del entorno MercaPlus.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="infrastructure-grid">
+
+                    <article class="technical-card">
+
+                        <span class="technical-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Windows Server 2025
+                            </h3>
+
+                            <p>
+                                Plataforma utilizada para los servicios
+                                relacionados con Active Directory, DNS,
+                                DHCP y políticas de grupo.
+                            </p>
+
+                            <div class="technical-tags">
+                                <span>Active Directory</span>
+                                <span>DNS</span>
+                                <span>DHCP</span>
+                                <span>GPO</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="technical-card">
+
+                        <span class="technical-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Debian 12
+                            </h3>
+
+                            <p>
+                                Sistema utilizado para diferentes servicios
+                                de infraestructura, incluyendo Samba,
+                                PostgreSQL, Odoo y CUPS.
+                            </p>
+
+                            <div class="technical-tags">
+                                <span>Samba</span>
+                                <span>PostgreSQL</span>
+                                <span>Odoo</span>
+                                <span>CUPS</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="technical-card">
+
+                        <span class="technical-number">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Rocky Linux 9
+                            </h3>
+
+                            <p>
+                                Plataforma empleada para servicios de
+                                monitorización y copias de seguridad
+                                dentro de la infraestructura.
+                            </p>
+
+                            <div class="technical-tags">
+                                <span>Zabbix</span>
+                                <span>Backups</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="technical-card">
+
+                        <span class="technical-number">
+                            04
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Ubuntu Server
+                            </h3>
+
+                            <p>
+                                Plataforma presente dentro del conjunto de
+                                sistemas utilizados en la infraestructura
+                                del proyecto.
+                            </p>
+
+                            <div class="technical-tags">
+                                <span>Linux</span>
+                                <span>Servidor</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             04 · TECNOLOGÍAS
+        ========================================= -->
+
+        <section class="mercaplus-section technologies-section">
+
+            <div class="container">
+
+                <div class="section-heading mercaplus-heading">
+
+                    <div>
+
+                        <p class="section-eyebrow">
+                            04 · TECNOLOGÍAS
+                        </p>
+
+                        <h2>
+                            Componentes del entorno.
+                        </h2>
+
+                        <p class="section-description">
+                            MercaPlus reúne tecnologías de redes, sistemas,
+                            seguridad, virtualización, servicios y
+                            aplicaciones empresariales.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="technology-list">
+
+                    <div class="technology-row">
+
+                        <span>01</span>
+
+                        <div>
+                            <strong>Redes y seguridad</strong>
+                            <p>
+                                pfSense · VLANs · DMZ · OpenVPN
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="technology-row">
+
+                        <span>02</span>
+
+                        <div>
+                            <strong>Sistemas</strong>
+                            <p>
+                                Windows Server 2025 · Debian 12 · Rocky Linux 9
+                                · Ubuntu Server
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="technology-row">
+
+                        <span>03</span>
+
+                        <div>
+                            <strong>Directorio y servicios de red</strong>
+                            <p>
+                                Active Directory · DNS · DHCP · GPO · Samba
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="technology-row">
+
+                        <span>04</span>
+
+                        <div>
+                            <strong>Aplicaciones empresariales</strong>
+                            <p>
+                                PostgreSQL · Odoo · WooCommerce · WordPress
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="technology-row">
+
+                        <span>05</span>
+
+                        <div>
+                            <strong>Monitorización y continuidad</strong>
+                            <p>
+                                Zabbix · Backups
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="technology-row">
+
+                        <span>06</span>
+
+                        <div>
+                            <strong>Servicios</strong>
+                            <p>
+                                CUPS · Postfix · Dovecot · Virtualización
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             05 · SERVICIOS
+        ========================================= -->
+
+        <section class="mercaplus-section services-section">
+
+            <div class="container">
+
+                <div class="section-heading mercaplus-heading">
+
+                    <div>
+
+                        <p class="section-eyebrow">
+                            05 · SERVICIOS
+                        </p>
+
+                        <h2>
+                            Una infraestructura conectada.
+                        </h2>
+
+                        <p class="section-description">
+                            Los diferentes componentes del proyecto se
+                            agrupan en servicios que cubren las necesidades
+                            de red, sistemas, aplicaciones y administración.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="services-grid">
+
+                    <article class="service-block">
+
+                        <span>01</span>
+
+                        <h3>
+                            Red e infraestructura
+                        </h3>
+
+                        <p>
+                            Firewall, segmentación mediante VLANs,
+                            DMZ y conectividad VPN.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-block">
+
+                        <span>02</span>
+
+                        <h3>
+                            Directorio
+                        </h3>
+
+                        <p>
+                            Active Directory, gestión de usuarios,
+                            DNS, DHCP y políticas de grupo.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-block">
+
+                        <span>03</span>
+
+                        <h3>
+                            Recursos compartidos
+                        </h3>
+
+                        <p>
+                            Servicios de archivos mediante Samba
+                            dentro de la infraestructura.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-block">
+
+                        <span>04</span>
+
+                        <h3>
+                            ERP y TPV
+                        </h3>
+
+                        <p>
+                            Odoo y PostgreSQL junto con el entorno
+                            destinado a las operaciones del supermercado.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-block">
+
+                        <span>05</span>
+
+                        <h3>
+                            Servicios web
+                        </h3>
+
+                        <p>
+                            WordPress y WooCommerce dentro de la
+                            arquitectura del proyecto.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-block">
+
+                        <span>06</span>
+
+                        <h3>
+                            Monitorización
+                        </h3>
+
+                        <p>
+                            Zabbix y sistemas de backup para la
+                            supervisión y continuidad de la infraestructura.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-block">
+
+                        <span>07</span>
+
+                        <h3>
+                            Correo
+                        </h3>
+
+                        <p>
+                            Postfix y Dovecot como componentes del
+                            servicio de correo electrónico.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-block">
+
+                        <span>08</span>
+
+                        <h3>
+                            Impresión
+                        </h3>
+
+                        <p>
+                            CUPS como servicio de impresión dentro
+                            del entorno.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             06 · IMPLEMENTACIÓN
+        ========================================= -->
+
+        <section class="mercaplus-section implementation-section">
+
+            <div class="container">
+
+                <div class="implementation-grid">
+
+                    <div>
+
+                        <p class="section-eyebrow">
+                            06 · IMPLEMENTACIÓN
+                        </p>
+
+                        <h2>
+                            Del diseño a la infraestructura.
+                        </h2>
+
+                        <p class="implementation-text">
+                            El proyecto aborda tanto el diseño de la
+                            infraestructura como la implementación de sus
+                            diferentes componentes, integrando redes,
+                            sistemas, servicios, seguridad y aplicaciones
+                            dentro de un mismo escenario.
+                        </p>
+
+                        <p class="implementation-text">
+                            La documentación técnica permite recoger las
+                            configuraciones, procedimientos y decisiones
+                            realizadas durante el desarrollo del proyecto.
+                        </p>
+
+                    </div>
+
+
+                    <div class="implementation-points">
+
+                        <div class="implementation-point">
+
+                            <span>01</span>
+
+                            <div>
+                                <strong>Diseño</strong>
+                                <p>
+                                    Arquitectura y organización de la
+                                    infraestructura.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="implementation-point">
+
+                            <span>02</span>
+
+                            <div>
+                                <strong>Configuración</strong>
+                                <p>
+                                    Sistemas, servicios y componentes
+                                    de red.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="implementation-point">
+
+                            <span>03</span>
+
+                            <div>
+                                <strong>Integración</strong>
+                                <p>
+                                    Conexión entre los diferentes servicios
+                                    de la infraestructura.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="implementation-point">
+
+                            <span>04</span>
+
+                            <div>
+                                <strong>Documentación</strong>
+                                <p>
+                                    Procedimientos y documentación técnica
+                                    del proyecto.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             DOCUMENTACIÓN
+        ========================================= -->
+
+        <section
+            class="mercaplus-section documentation-project-section"
+            id="documentacion-mercaplus"
+        >
+
+            <div class="container">
+
+                <div class="section-heading mercaplus-heading">
+
+                    <div>
+
+                        <p class="section-eyebrow">
+                            DOCUMENTACIÓN
+                        </p>
+
+                        <h2>
+                            El proyecto, documentado.
+                        </h2>
+
+                        <p class="section-description">
+                            Aquí se incorporará la documentación técnica,
+                            memoria y material desarrollado durante el
+                            proyecto MercaPlus.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="documentation-project-box">
+
+                    <div class="documentation-project-copy">
+
+                        <span class="documentation-project-icon">
+                            ◇
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Documentación técnica
+                            </h3>
+
+                            <p>
+                                Memoria, documentación, diagramas y
+                                materiales relacionados con la
+                                infraestructura MercaPlus.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="documentation-project-status">
+                        Archivos próximamente
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             RESULTADO
+        ========================================= -->
+
+        <section class="mercaplus-result">
+
+            <div class="container">
+
+                <div class="result-box">
+
+                    <div>
+
+                        <p class="section-eyebrow">
+                            RESULTADO
+                        </p>
+
+                        <h2>
+                            MercaPlus como entorno tecnológico completo.
+                        </h2>
+
+                        <p>
+                            El proyecto reúne en un mismo escenario
+                            diferentes áreas de la administración de
+                            sistemas, desde la infraestructura de red
+                            hasta los servicios empresariales,
+                            monitorización y seguridad.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="../index.html#proyectos"
+                        class="button button-secondary"
+                    >
+                        ← Volver a proyectos
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <div class="footer-brand">
+
+                <strong>LUPI</strong>
 
                 <span></span>
 
-                PROYECTO · TFG
+                <p>
+                    Samuel Prado Pereira
+                </p>
 
             </div>
 
 
-            <h1>
-                MercaPlus
-            </h1>
-
-
-            <h2>
-                Diseño e implementación de una
-                infraestructura informática corporativa.
-            </h2>
-
-
-            <p class="mp-hero-description">
-
-                Proyecto de infraestructura IT desarrollado para
-                una cadena de supermercados ficticia, integrando
-                redes, sistemas, seguridad, virtualización y
-                servicios empresariales.
-
-            </p>
-
-
-            <div class="mp-tags">
-
-                <span>Infraestructura</span>
-
-                <span>Redes</span>
-
-                <span>Seguridad</span>
-
-                <span>Windows Server</span>
-
-                <span>Linux</span>
-
-                <span>Virtualización</span>
-
+            <div class="footer-slogan">
+                “SISTEMAS QUE IMPULSAN IDEAS”
             </div>
 
 
-            <div class="mp-actions">
+            <div class="footer-links">
 
                 <a
-                    href="#proyecto"
-                    class="mp-btn mp-btn-primary"
+                    href="https://github.com/prapersam"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
-                    Ver proyecto
-                    <span>→</span>
+                    GitHub
                 </a>
 
-
-                <a
-                    href="#documentacion"
-                    class="mp-btn mp-btn-secondary"
-                >
-                    Documentación
-                    <span>↗</span>
-                </a>
-
-            </div>
-
-
-            <div class="mp-hero-meta">
-
-                <span>
-                    TFG
-                </span>
-
-                <span>
-                    Infraestructura IT
-                </span>
-
-                <span>
-                    Lugo
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="mp-hero-side">
-
-            <div class="hero-side-line"></div>
-
-            <span>INFRAESTRUCTURA</span>
-
-            <span>REDES</span>
-
-            <span>SEGURIDAD</span>
-
-            <span>SISTEMAS</span>
-
-            <div class="hero-side-line"></div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     01 · EL PROYECTO
-========================================================= -->
-
-<section
-    class="mp-section mp-project"
-    id="proyecto"
->
-
-    <div class="container">
-
-
-        <div class="mp-section-intro">
-
-
-            <div class="mp-section-number">
-
-                01 · EL<br>
-                PROYECTO
-
-            </div>
-
-
-            <div class="mp-section-title">
-
-                <h2>
-                    Una infraestructura
-                    pensada de principio
-                    a fin.
-                </h2>
-
-            </div>
-
-
-            <div class="mp-section-text">
-
-                <p>
-
-                    MercaPlus plantea el diseño de una
-                    infraestructura informática completa para
-                    una organización con servicios internos,
-                    sistemas empresariales y servicios
-                    publicados hacia Internet.
-
-                </p>
-
-                <p>
-
-                    El proyecto combina administración de
-                    sistemas, redes, seguridad, virtualización,
-                    servicios Linux y Windows y mecanismos de
-                    continuidad.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="mp-feature-grid">
-
-
-            <article class="mp-feature">
-
-                <span class="feature-number">
-                    01
-                </span>
-
-                <div>
-
-                    <h3>
-                        Red segmentada
-                    </h3>
-
-                    <p>
-                        Separación de los distintos ámbitos
-                        de la organización mediante cinco VLANs.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <article class="mp-feature">
-
-                <span class="feature-number">
-                    02
-                </span>
-
-                <div>
-
-                    <h3>
-                        Administración centralizada
-                    </h3>
-
-                    <p>
-                        Active Directory, DNS, DHCP y políticas
-                        de grupo para la gestión de los sistemas.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <article class="mp-feature">
-
-                <span class="feature-number">
-                    03
-                </span>
-
-                <div>
-
-                    <h3>
-                        Servicios empresariales
-                    </h3>
-
-                    <p>
-                        ERP, base de datos, almacenamiento
-                        compartido, impresión y monitorización.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <article class="mp-feature">
-
-                <span class="feature-number">
-                    04
-                </span>
-
-                <div>
-
-                    <h3>
-                        Seguridad y continuidad
-                    </h3>
-
-                    <p>
-                        Firewall, DMZ, copias de seguridad,
-                        redundancia y servicios de contingencia.
-                    </p>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     02 · ARQUITECTURA
-========================================================= -->
-
-<section
-    class="mp-section mp-architecture"
-    id="arquitectura"
->
-
-    <div class="container">
-
-
-        <div class="mp-section-intro architecture-intro">
-
-
-            <div class="mp-section-number">
-
-                02 ·<br>
-                ARQUITECTURA
-
-            </div>
-
-
-            <div class="mp-section-title">
-
-                <h2>
-                    Arquitectura
-                    de red.
-                </h2>
-
-            </div>
-
-
-            <div class="mp-section-text">
-
-                <p>
-
-                    La infraestructura se organiza mediante
-                    una arquitectura cliente-servidor y una
-                    segmentación lógica basada en VLANs.
-
-                </p>
-
-                <p>
-
-                    pfSense actúa como elemento central de
-                    seguridad y control de las comunicaciones
-                    entre las diferentes redes.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- DIAGRAMA -->
-
-        <div class="mp-diagram">
-
-
-            <div class="mp-diagram-header">
-
-                <div>
-
-                    <span>
-                        FIGURA 01
-                    </span>
-
-                    <h3>
-                        Arquitectura lógica de MercaPlus
-                    </h3>
-
-                </div>
-
-
-                <div class="diagram-status">
-
-                    <i></i>
-
-                    RED SEGMENTADA
-
-                </div>
-
-            </div>
-
-
-            <div class="mp-diagram-image">
-
-                <img
-                    src="../assets/images/projects/mercaplus/MercaPlus by LupiX - Proyecto final de Grado Superior.png"
-                    alt="Arquitectura lógica de la infraestructura de MercaPlus"
-                >
-
-            </div>
-
-
-            <div class="mp-diagram-caption">
-
-                Arquitectura lógica de la infraestructura
-                de MercaPlus.
-
-            </div>
-
-        </div>
-
-
-
-        <!-- VLAN -->
-
-        <div class="mp-subsection-header">
-
-            <div>
-
-                <span>
-                    SEGMENTACIÓN
-                </span>
-
-                <h3>
-                    Cinco redes,
-                    cinco funciones.
-                </h3>
-
-            </div>
-
-
-            <p>
-
-                Cada segmento responde a una función concreta
-                dentro de la infraestructura y permite separar
-                usuarios, servicios y sistemas críticos.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="mp-vlan-grid">
-
-
-            <article class="mp-vlan">
-
-                <div class="vlan-top">
-
-                    <span>
-                        VLAN 10
-                    </span>
-
-                    <span>
-                        SISTEMAS
-                    </span>
-
-                </div>
-
-                <h4>
-                    Sistemas
-                </h4>
-
-                <code>
-                    172.16.10.0/24
-                </code>
-
-                <p>
-                    AD DS · DNS · DHCP · GPOs
-                </p>
-
-            </article>
-
-
-            <article class="mp-vlan">
-
-                <div class="vlan-top">
-
-                    <span>
-                        VLAN 20
-                    </span>
-
-                    <span>
-                        DMZ
-                    </span>
-
-                </div>
-
-                <h4>
-                    DMZ
-                </h4>
-
-                <code>
-                    172.16.20.0/24
-                </code>
-
-                <p>
-                    Servicios públicos
-                </p>
-
-            </article>
-
-
-            <article class="mp-vlan">
-
-                <div class="vlan-top">
-
-                    <span>
-                        VLAN 30
-                    </span>
-
-                    <span>
-                        TPV
-                    </span>
-
-                </div>
-
-                <h4>
-                    TPV
-                </h4>
-
-                <code>
-                    172.16.30.0/24
-                </code>
-
-                <p>
-                    Terminales de punto de venta
-                </p>
-
-            </article>
-
-
-            <article class="mp-vlan">
-
-                <div class="vlan-top">
-
-                    <span>
-                        VLAN 40
-                    </span>
-
-                    <span>
-                        OFICINA
-                    </span>
-
-                </div>
-
-                <h4>
-                    Oficina
-                </h4>
-
-                <code>
-                    172.16.40.0/24
-                </code>
-
-                <p>
-                    Equipos de oficina
-                </p>
-
-            </article>
-
-
-            <article class="mp-vlan">
-
-                <div class="vlan-top">
-
-                    <span>
-                        VLAN 50
-                    </span>
-
-                    <span>
-                        CPD
-                    </span>
-
-                </div>
-
-                <h4>
-                    CPD
-                </h4>
-
-                <code>
-                    172.16.50.0/24
-                </code>
-
-                <p>
-                    Servidores y servicios críticos
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     03 · INFRAESTRUCTURA
-========================================================= -->
-
-<section
-    class="mp-section mp-infrastructure"
-    id="infraestructura"
->
-
-    <div class="container">
-
-
-        <div class="mp-section-intro">
-
-
-            <div class="mp-section-number">
-
-                03 ·<br>
-                INFRAESTRUCTURA
-
-            </div>
-
-
-            <div class="mp-section-title">
-
-                <h2>
-                    Los sistemas
-                    detrás de MercaPlus.
-                </h2>
-
-            </div>
-
-
-            <div class="mp-section-text">
-
-                <p>
-
-                    Cada servidor cumple una función concreta
-                    dentro de la arquitectura, separando
-                    servicios y facilitando la administración.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="mp-server-list">
-
-
-            <!-- SRV-DOM -->
-
-            <article class="mp-server">
-
-                <div class="server-id">
-                    01
-                </div>
-
-
-                <div class="server-main">
-
-                    <span>
-                        CORE · VLAN 10
-                    </span>
-
-                    <h3>
-                        SRV-DOM
-                    </h3>
-
-                    <strong>
-                        Windows Server 2025
-                    </strong>
-
-                    <code>
-                        172.16.10.30
-                    </code>
-
-                </div>
-
-
-                <div class="server-description">
-
-                    <p>
-
-                        Controlador de dominio y servicios
-                        centrales de identidad y administración
-                        de la red.
-
-                    </p>
-
-                    <div class="server-tags">
-
-                        <span>AD DS</span>
-                        <span>DNS</span>
-                        <span>DHCP</span>
-                        <span>GPO</span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- SRV-APP -->
-
-            <article class="mp-server">
-
-                <div class="server-id">
-                    02
-                </div>
-
-
-                <div class="server-main">
-
-                    <span>
-                        CPD · VLAN 50
-                    </span>
-
-                    <h3>
-                        SRV-APP
-                    </h3>
-
-                    <strong>
-                        Debian 12
-                    </strong>
-
-                    <code>
-                        172.16.50.20
-                    </code>
-
-                </div>
-
-
-                <div class="server-description">
-
-                    <p>
-
-                        Servidor Linux destinado a servicios
-                        empresariales, almacenamiento compartido
-                        y gestión de impresión.
-
-                    </p>
-
-                    <div class="server-tags">
-
-                        <span>Samba</span>
-                        <span>PostgreSQL</span>
-                        <span>Odoo</span>
-                        <span>CUPS</span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- SRV-BACKUPS -->
-
-            <article class="mp-server">
-
-                <div class="server-id">
-                    03
-                </div>
-
-
-                <div class="server-main">
-
-                    <span>
-                        CPD · VLAN 50
-                    </span>
-
-                    <h3>
-                        SRV-BACKUPS
-                    </h3>
-
-                    <strong>
-                        Rocky Linux 9
-                    </strong>
-
-                    <code>
-                        172.16.50.10
-                    </code>
-
-                </div>
-
-
-                <div class="server-description">
-
-                    <p>
-
-                        Servidor destinado a copias de seguridad,
-                        monitorización y servicios secundarios.
-
-                    </p>
-
-                    <div class="server-tags">
-
-                        <span>Zabbix</span>
-                        <span>Backups</span>
-                        <span>DNS</span>
-                        <span>DHCP</span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- SRV-DMZ -->
-
-            <article class="mp-server">
-
-                <div class="server-id">
-                    04
-                </div>
-
-
-                <div class="server-main">
-
-                    <span>
-                        DMZ · VLAN 20
-                    </span>
-
-                    <h3>
-                        SRV-DMZ
-                    </h3>
-
-                    <strong>
-                        Ubuntu Server 20.04
-                    </strong>
-
-                    <code>
-                        172.16.20.20
-                    </code>
-
-                </div>
-
-
-                <div class="server-description">
-
-                    <p>
-
-                        Frontal público de MercaPlus para
-                        servicios accesibles desde redes externas.
-
-                    </p>
-
-                    <div class="server-tags">
-
-                        <span>WordPress</span>
-                        <span>Apache</span>
-                        <span>Postfix</span>
-                        <span>Dovecot</span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     04 · TECNOLOGÍAS
-========================================================= -->
-
-<section
-    class="mp-section mp-technologies"
-    id="tecnologias"
->
-
-    <div class="container">
-
-
-        <div class="mp-section-intro">
-
-
-            <div class="mp-section-number">
-
-                04 ·<br>
-                TECNOLOGÍAS
-
-            </div>
-
-
-            <div class="mp-section-title">
-
-                <h2>
-                    El stack que hace
-                    posible la infraestructura.
-                </h2>
-
-            </div>
-
-
-            <div class="mp-section-text">
-
-                <p>
-
-                    Una combinación de tecnologías Windows,
-                    Linux, virtualización, seguridad y servicios
-                    empresariales.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="mp-tech-grid">
-
-
-            <div class="mp-tech">
-                <strong>pfSense</strong>
-                <span>Firewall</span>
-            </div>
-
-
-            <div class="mp-tech">
-                <strong>Windows Server 2025</strong>
-                <span>Servicios centrales</span>
-            </div>
-
-
-            <div class="mp-tech">
-                <strong>Debian 12</strong>
-                <span>Servicios Linux</span>
-            </div>
-
-
-            <div class="mp-tech">
-                <strong>Rocky Linux 9</strong>
-                <span>Contingencia</span>
-            </div>
-
-
-            <div class="mp-tech">
-                <strong>Ubuntu Server</strong>
-                <span>DMZ</span>
-            </div>
-
-
-            <div class="mp-tech">
-                <strong>Odoo 17</strong>
-                <span>ERP</span>
-            </div>
-
-
-            <div class="mp-tech">
-                <strong>PostgreSQL</strong>
-                <span>Base de datos</span>
-            </div>
-
-
-            <div class="mp-tech">
-                <strong>Zabbix</strong>
-                <span>Monitorización</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     05 · SERVICIOS
-========================================================= -->
-
-<section
-    class="mp-section mp-services"
-    id="servicios"
->
-
-    <div class="container">
-
-
-        <div class="mp-section-intro">
-
-
-            <div class="mp-section-number">
-
-                05 ·<br>
-                SERVICIOS
-
-            </div>
-
-
-            <div class="mp-section-title">
-
-                <h2>
-                    Servicios que mantienen
-                    funcionando MercaPlus.
-                </h2>
-
-            </div>
-
-
-            <div class="mp-section-text">
-
-                <p>
-
-                    Los distintos servicios se distribuyen
-                    entre las redes y servidores según su
-                    función dentro de la infraestructura.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="mp-service-list">
-
-
-            <div class="mp-service-row">
-
-                <span>01</span>
-
-                <strong>
-                    PostgreSQL
-                </strong>
-
-                <span>
-                    SRV-APP · CPD
-                </span>
-
-                <p>
-                    Base de datos
-                </p>
-
-            </div>
-
-
-            <div class="mp-service-row">
-
-                <span>02</span>
-
-                <strong>
-                    Odoo
-                </strong>
-
-                <span>
-                    SRV-APP · CPD
-                </span>
-
-                <p>
-                    ERP empresarial
-                </p>
-
-            </div>
-
-
-            <div class="mp-service-row">
-
-                <span>03</span>
-
-                <strong>
-                    CUPS
-                </strong>
-
-                <span>
-                    SRV-APP · CPD
-                </span>
-
-                <p>
-                    Gestión de impresión
-                </p>
-
-            </div>
-
-
-            <div class="mp-service-row">
-
-                <span>04</span>
-
-                <strong>
-                    Zabbix
-                </strong>
-
-                <span>
-                    SRV-BACKUPS · CPD
-                </span>
-
-                <p>
-                    Monitorización
-                </p>
-
-            </div>
-
-
-            <div class="mp-service-row">
-
-                <span>05</span>
-
-                <strong>
-                    DNS secundario
-                </strong>
-
-                <span>
-                    SRV-BACKUPS · CPD
-                </span>
-
-                <p>
-                    Resolución secundaria
-                </p>
-
-            </div>
-
-
-            <div class="mp-service-row">
-
-                <span>06</span>
-
-                <strong>
-                    DHCP contingencia
-                </strong>
-
-                <span>
-                    SRV-BACKUPS · CPD
-                </span>
-
-                <p>
-                    Continuidad
-                </p>
-
-            </div>
-
-
-            <div class="mp-service-row">
-
-                <span>07</span>
-
-                <strong>
-                    WordPress / WooCommerce
-                </strong>
-
-                <span>
-                    SRV-DMZ · DMZ
-                </span>
-
-                <p>
-                    Web y tienda online
-                </p>
-
-            </div>
-
-
-            <div class="mp-service-row">
-
-                <span>08</span>
-
-                <strong>
-                    Postfix / Dovecot
-                </strong>
-
-                <span>
-                    SRV-DMZ · DMZ
-                </span>
-
-                <p>
-                    Correo corporativo
-                </p>
-
-            </div>
-
-
-            <div class="mp-service-row">
-
-                <span>09</span>
-
-                <strong>
-                    OpenVPN
-                </strong>
-
-                <span>
-                    SRV-DMZ · DMZ
-                </span>
-
-                <p>
-                    Acceso remoto
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     06 · IMPLEMENTACIÓN
-========================================================= -->
-
-<section
-    class="mp-section mp-implementation"
-    id="implementacion"
->
-
-    <div class="container">
-
-
-        <div class="mp-section-intro">
-
-
-            <div class="mp-section-number">
-
-                06 ·<br>
-                IMPLEMENTACIÓN
-
-            </div>
-
-
-            <div class="mp-section-title">
-
-                <h2>
-                    De diseño a
-                    infraestructura real.
-                </h2>
-
-            </div>
-
-
-            <div class="mp-section-text">
-
-                <p>
-
-                    El proyecto se desarrolló de forma
-                    progresiva, construyendo primero la base
-                    de red y posteriormente los servicios.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="mp-timeline">
-
-
-            <article>
-
-                <span>01</span>
-
-                <div>
-
-                    <h3>
-                        Diseño de red
-                    </h3>
-
-                    <p>
-                        Definición de la arquitectura y
-                        segmentación mediante VLANs.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <article>
-
-                <span>02</span>
-
-                <div>
-
-                    <h3>
-                        Seguridad perimetral
-                    </h3>
-
-                    <p>
-                        Despliegue de pfSense, NAT y políticas
-                        de filtrado entre redes.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <article>
-
-                <span>03</span>
-
-                <div>
-
-                    <h3>
-                        Servicios centrales
-                    </h3>
-
-                    <p>
-                        Implementación de Active Directory,
-                        DNS, DHCP y políticas GPO.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <article>
-
-                <span>04</span>
-
-                <div>
-
-                    <h3>
-                        Servicios Linux
-                    </h3>
-
-                    <p>
-                        Despliegue de Samba, PostgreSQL,
-                        Odoo y CUPS.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <article>
-
-                <span>05</span>
-
-                <div>
-
-                    <h3>
-                        DMZ y servicios externos
-                    </h3>
-
-                    <p>
-                        Publicación de servicios web,
-                        correo y acceso remoto.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <article>
-
-                <span>06</span>
-
-                <div>
-
-                    <h3>
-                        Monitorización y contingencia
-                    </h3>
-
-                    <p>
-                        Monitorización, copias de seguridad
-                        y servicios secundarios.
-                    </p>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     DOCUMENTACIÓN
-========================================================= -->
-
-<section
-    class="mp-section mp-documentation"
-    id="documentacion"
->
-
-    <div class="container">
-
-
-        <div class="mp-section-intro">
-
-
-            <div class="mp-section-number">
-
-                DOCUMENTACIÓN
-
-            </div>
-
-
-            <div class="mp-section-title">
-
-                <h2>
-                    Todo el proyecto,
-                    documentado.
-                </h2>
-
-            </div>
-
-
-            <div class="mp-section-text">
-
-                <p>
-
-                    Material técnico utilizado para documentar
-                    el diseño, configuración e implementación
-                    de MercaPlus.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="mp-doc-grid">
-
-
-            <article class="mp-doc">
-
-                <div class="doc-type">
-                    PDF
-                </div>
-
-                <h3>
-                    Memoria técnica
-                </h3>
-
-                <p>
-                    Documentación completa del proyecto,
-                    arquitectura, configuración y servicios.
-                </p>
+                <span>|</span>
 
                 <a href="#">
-                    Ver documentación
-                    →
+                    LinkedIn
                 </a>
 
-            </article>
+                <span>|</span>
 
-
-            <article class="mp-doc">
-
-                <div class="doc-type">
-                    PDF
-                </div>
-
-                <h3>
-                    Presentación
-                </h3>
-
-                <p>
-                    Presentación utilizada para explicar
-                    el proyecto y sus resultados.
-                </p>
-
-                <a href="#">
-                    Ver presentación
-                    →
+                <a href="mailto:contacto@rincondelupi.com">
+                    Contacto
                 </a>
-
-            </article>
-
-
-            <article class="mp-doc">
-
-                <div class="doc-type">
-                    MATERIAL
-                </div>
-
-                <h3>
-                    Material complementario
-                </h3>
-
-                <p>
-                    Scripts, configuraciones, capturas y
-                    recursos utilizados durante el desarrollo.
-                </p>
-
-                <a href="#">
-                    Ver material
-                    →
-                </a>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     RESULTADO
-========================================================= -->
-
-<section class="mp-result">
-
-    <div class="container">
-
-
-        <div class="mp-result-box">
-
-
-            <div>
-
-                <span>
-                    RESULTADO
-                </span>
-
-                <h2>
-                    Una infraestructura
-                    completa y segmentada.
-                </h2>
-
-                <p>
-
-                    MercaPlus integra redes, sistemas,
-                    seguridad, servicios empresariales,
-                    monitorización y continuidad dentro
-                    de una infraestructura diseñada
-                    de forma integral.
-
-                </p>
-
-            </div>
-
-
-            <div class="mp-result-stats">
-
-                <div>
-
-                    <strong>
-                        5
-                    </strong>
-
-                    <span>
-                        VLANs
-                    </span>
-
-                </div>
-
-
-                <div>
-
-                    <strong>
-                        4
-                    </strong>
-
-                    <span>
-                        servidores
-                    </span>
-
-                </div>
-
-
-                <div>
-
-                    <strong>
-                        9+
-                    </strong>
-
-                    <span>
-                        servicios
-                    </span>
-
-                </div>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </footer>
 
 
+    <!-- =========================================
+         MENÚ MÓVIL
+    ========================================= -->
 
-<!-- =========================================================
-     VOLVER
-========================================================= -->
+    <script>
 
-<section class="mp-back">
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mainNav = document.querySelector(".main-nav");
 
-    <div class="container">
+        if (menuToggle && mainNav) {
 
-        <a href="../index.html#proyectos">
-            ← Volver a proyectos
-        </a>
+            menuToggle.addEventListener("click", () => {
 
-    </div>
+                const isOpen =
+                    mainNav.classList.toggle("open");
 
-</section>
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                );
 
-
-</main>
-
-
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
-<footer class="site-footer">
-
-    <div class="container">
-
-        <div class="footer-inner">
-
-            <span>
-                © 2026 Rincón de Lupi
-            </span>
-
-            <span>
-                Samuel Prado Pereira · Técnico de Sistemas
-            </span>
-
-        </div>
-
-    </div>
-
-</footer>
+            });
 
 
+            mainNav.querySelectorAll("a").forEach(link => {
 
-<script src="../js/main.js"></script>
+                link.addEventListener("click", () => {
+
+                    mainNav.classList.remove("open");
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                });
+
+            });
+
+        }
+
+    </script>
 
 </body>
 
