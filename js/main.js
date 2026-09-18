@@ -199,16 +199,12 @@ const intro = document.querySelector(".site-intro");
 
 if (intro) {
 
-    window.addEventListener("load", () => {
+    setTimeout(() => {
+        intro.classList.add("hide");
+    }, 1000);
 
-        setTimeout(() => {
-            intro.classList.add("hide");
-        }, 900);
-
-        setTimeout(() => {
-            intro.remove();
-        }, 1500);
-
-    });
+    setTimeout(() => {
+        intro.remove();
+    }, 1700);
 
 }
