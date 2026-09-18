@@ -1971,4 +1971,19 @@ a { color: inherit; text-decoration: none; }
         line-height: 1.7;
     }
 
+    .footer-logo-small {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.footer-logo-small img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+}
 }
