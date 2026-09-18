@@ -190,3 +190,25 @@ const prefersReducedMotion = window.matchMedia(
 if (prefersReducedMotion.matches) {
     document.documentElement.classList.add("reduced-motion");
 }
+
+/* =========================================================
+   ANIMACIÓN DE ENTRADA
+   ========================================================= */
+
+const intro = document.querySelector(".site-intro");
+
+if (intro) {
+
+    window.addEventListener("load", () => {
+
+        setTimeout(() => {
+            intro.classList.add("hide");
+        }, 900);
+
+        setTimeout(() => {
+            intro.remove();
+        }, 1500);
+
+    });
+
+}
