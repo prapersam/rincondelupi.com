@@ -1,142 +1,154 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<title>CV | Samuel Prado Pereira</title>
+    <title>CV | Samuel Prado Pereira</title>
 
-<link rel="stylesheet" href="../css/styles.css">
-<link rel="stylesheet" href="../css/cv.css">
-```
-
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/cv.css">
 </head>
 
 <body>
 
-```
-<header class="site-header">
-    <div class="container header-inner">
+    <header class="site-header" id="top">
+        <div class="container header-inner">
 
-        <a href="../index.html" class="brand">
-            <img src="../assets/images/logo/lupi.png" alt="Lupi">
-            <span>LUPI</span>
-        </a>
+            <a class="brand" href="../index.html" aria-label="Rincón de Lupi">
+                <img src="../assets/images/logo/lupi.png" alt="Lupi">
+                <span>LUPI</span>
+            </a>
 
-        <nav class="main-nav">
-            <a href="../index.html">Inicio</a>
-            <a href="../proyectos/index.html">Proyectos</a>
-            <a href="../documentacion/index.html">Documentación</a>
-            <a href="../sobre-mi/index.html">Sobre mí</a>
-            <a href="index.html" class="active">CV</a>
-        </nav>
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-    </div>
-</header>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="../index.html">Inicio</a>
+                <a href="../proyectos/index.html">Proyectos</a>
+                <a href="../documentacion/index.html">Documentación</a>
+                <a href="../sobre-mi/index.html">Sobre mí</a>
+                <a class="active" href="index.html">CV</a>
+                <a href="../index.html#contacto">Contacto</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#" aria-label="GitHub">GH</a>
+                <a href="#" aria-label="LinkedIn">in</a>
+                <a href="mailto:correo@ejemplo.com" aria-label="Correo">@</a>
+            </div>
+
+            <span class="header-pill">Sistemas que impulsan ideas</span>
+
+        </div>
+    </header>
 
 
-<main class="cv-page">
-    <div class="container">
+    <main>
 
-        <div class="cv-header">
-            <h1>Currículum Vitae</h1>
+        <section class="cv-page">
 
-            <p>
-                Samuel Prado Pereira · Técnico de Administración de Sistemas
-            </p>
+            <div class="container">
 
-            <div class="cv-actions">
+                <div class="cv-header">
 
-                <a
-                    href="../assets/cv/Samuel-Prado-Pereira-CV.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button button-primary"
-                >
-                    Abrir CV
-                </a>
+                    <span class="section-label">CURRÍCULUM</span>
 
-                <a
-                    href="../assets/cv/Samuel-Prado-Pereira-CV.pdf"
-                    download
-                    class="button button-secondary"
-                >
-                    Descargar CV
-                </a>
+                    <h1>
+                        Mi <span>CV</span>
+                    </h1>
+
+                    <p>
+                        Consulta mi trayectoria profesional, formación y
+                        experiencia como Técnico de Sistemas Informáticos en Red.
+                    </p>
+
+                    <div class="cv-actions">
+
+                        <a
+                            href="../assets/cv/Samuel-Prado-Pereira-CV.pdf"
+                            target="_blank"
+                            class="button button-primary"
+                        >
+                            Abrir CV
+                            <span>↗</span>
+                        </a>
+
+                        <a
+                            href="../assets/cv/Samuel-Prado-Pereira-CV.pdf"
+                            download
+                            class="button button-secondary"
+                        >
+                            Descargar CV
+                            <span>↓</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cv-viewer">
+
+                    <div class="cv-viewer-header">
+                        <span>DOCUMENTO PDF</span>
+                        <span>Samuel Prado Pereira</span>
+                    </div>
+
+                    <div class="cv-pdf">
+                        <iframe
+                            src="../assets/cv/Samuel-Prado-Pereira-CV.pdf"
+                            title="Currículum Vitae de Samuel Prado Pereira"
+                        ></iframe>
+                    </div>
+
+                </div>
 
             </div>
-        </div>
-
-
-        <section class="cv-viewer">
-
-            <iframe
-                src="../assets/cv/Samuel-Prado-Pereira-CV.pdf"
-                title="Currículum Vitae de Samuel Prado Pereira"
-            ></iframe>
 
         </section>
 
-    </div>
-</main>
+    </main>
 
 
-<footer class="site-footer">
-    <div class="container footer-inner">
+    <footer class="site-footer">
 
-        <div class="footer-brand">
+        <div class="container footer-inner">
 
-            <img
-                src="../assets/images/logo/lupi.png"
-                alt="Lupi"
-                class="footer-logo"
-            >
+            <div class="footer-brand">
 
-            <strong>LUPI</strong>
+                <div class="footer-logo">
+                    <img src="../assets/images/logo/lupi.png" alt="Lupi">
+                    <span>LUPI</span>
+                </div>
 
-            <span></span>
+                <span class="footer-separator">|</span>
 
-            <p>Samuel Prado Pereira</p>
+                <span class="footer-name">
+                    Samuel Prado Pereira
+                </span>
 
-        </div>
+            </div>
 
-        <div class="footer-slogan">
-            "SISTEMAS QUE IMPULSAN IDEAS"
-        </div>
+            <p class="footer-slogan">
+                "SISTEMAS QUE IMPULSAN IDEAS"
+            </p>
 
-        <div class="footer-links">
-
-            <a
-                href="https://github.com/prapersam"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                GitHub
-            </a>
-
-            <span>|</span>
-
-            <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                LinkedIn
-            </a>
-
-            <span>|</span>
-
-            <a href="mailto:contacto@rincondelupi.com">
-                Contacto
-            </a>
+            <div class="footer-links">
+                <a href="#" aria-label="GitHub">GitHub</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="../index.html#contacto">Contacto</a>
+            </div>
 
         </div>
 
-    </div>
-</footer>
-```
+    </footer>
+
+
+    <script src="../js/main.js"></script>
 
 </body>
 </html>

@@ -1,102 +1,176 @@
-/* =========================================
-CV
-========================================= */
+/* =========================================================
+   CV
+   ========================================================= */
 
 .cv-page {
-padding: 110px 0 80px;
+    padding: 110px 0 100px;
+    min-height: calc(100vh - 180px);
 }
 
+
+/* =========================================================
+   CABECERA DEL CV
+   ========================================================= */
+
 .cv-header {
-margin-bottom: 30px;
+    max-width: 850px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.cv-header .section-label {
+    display: inline-block;
+    margin-bottom: 18px;
 }
 
 .cv-header h1 {
-margin: 0 0 8px;
-font-size: clamp(2rem, 4vw, 3rem);
-line-height: 1.1;
+    margin: 0 0 20px;
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1;
+}
+
+.cv-header h1 span {
+    color: var(--accent);
 }
 
 .cv-header p {
-margin: 0;
-color: var(--muted);
-font-size: .9rem;
+    max-width: 680px;
+    margin: 0 auto;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
 }
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
 
 .cv-actions {
-display: flex;
-gap: 14px;
-margin-top: 24px;
-flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 32px;
+    flex-wrap: wrap;
 }
 
-/* =========================================
-VISOR PDF
-========================================= */
+
+/* =========================================================
+   VISOR PDF
+   ========================================================= */
 
 .cv-viewer {
-width: 100%;
-height: 1000px;
-
-```
-border: 1px solid var(--border);
-border-radius: 7px;
-
-background: #010914;
-
-overflow: hidden;
-```
-
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--surface);
+    box-shadow: var(--shadow);
 }
 
-.cv-viewer iframe {
-width: 100%;
-height: 100%;
-
-```
-display: block;
-
-border: 0;
-```
-
+.cv-viewer-header {
+    min-height: 54px;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface-alt);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
-/* =========================================
-RESPONSIVE
-========================================= */
+.cv-viewer-header span:first-child {
+    color: var(--accent);
+}
+
+.cv-viewer-header span:last-child {
+    color: var(--text-muted);
+}
+
+.cv-pdf {
+    width: 100%;
+    height: 850px;
+    background: #1a1a1a;
+}
+
+.cv-pdf iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
 @media (max-width: 820px) {
 
-```
-.cv-page {
-    padding: 100px 0 60px;
+    .cv-page {
+        padding: 80px 0 70px;
+    }
+
+    .cv-header {
+        margin-bottom: 40px;
+    }
+
+    .cv-viewer-header {
+        padding: 0 16px;
+        font-size: 0.7rem;
+    }
+
+    .cv-pdf {
+        height: 700px;
+    }
+
 }
 
-.cv-viewer {
-    height: 800px;
-}
-```
-
-}
 
 @media (max-width: 560px) {
 
-```
-.cv-page {
-    padding: 95px 0 50px;
-}
+    .cv-page {
+        padding: 65px 0 55px;
+    }
 
-.cv-actions {
-    flex-direction: column;
-    align-items: stretch;
-}
+    .cv-header h1 {
+        font-size: 3rem;
+    }
 
-.cv-actions .button {
-    width: 100%;
-}
+    .cv-header p {
+        font-size: 0.95rem;
+    }
 
-.cv-viewer {
-    height: 650px;
-}
-```
+    .cv-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cv-actions .button {
+        justify-content: center;
+    }
+
+    .cv-viewer {
+        border-radius: 12px;
+    }
+
+    .cv-viewer-header {
+        min-height: 48px;
+        padding: 0 12px;
+    }
+
+    .cv-viewer-header span:last-child {
+        display: none;
+    }
+
+    .cv-pdf {
+        height: 600px;
+    }
 
 }
