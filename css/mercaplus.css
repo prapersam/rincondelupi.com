@@ -10,22 +10,27 @@
 
 :root {
 
-    --mp-cyan: #38d9ff;
-    --mp-cyan-soft: #9eeeff;
+    --mp-bg: #020a13;
 
-    --mp-white: #f2f7ff;
+    --mp-bg-soft: #04101b;
 
-    --mp-muted: rgba(255, 255, 255, 0.62);
-    --mp-muted-soft: rgba(255, 255, 255, 0.48);
+    --mp-card: #061522;
 
-    --mp-border: rgba(100, 220, 255, 0.12);
+    --mp-card-soft: #071925;
 
-    --mp-card:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.035),
-            rgba(255, 255, 255, 0.012)
-        );
+    --mp-cyan: #00cfff;
+
+    --mp-cyan-bright: #18d8ff;
+
+    --mp-white: #f2f6ff;
+
+    --mp-text: #d4e1f0;
+
+    --mp-muted: #91a7bd;
+
+    --mp-border: rgba(0, 207, 255, 0.16);
+
+    --mp-border-soft: rgba(255, 255, 255, 0.07);
 
 }
 
@@ -34,28 +39,57 @@
    HEADER
 ========================================================= */
 
-.site-header .brand {
+.site-header {
+    position: relative;
+
+    z-index: 100;
+
+    height: 65px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    background:
+        #020a13;
+}
+
+
+.site-header .header-inner {
+    height: 65px;
+
     display: flex;
+
     align-items: center;
 
-    gap: 10px;
+    justify-content: space-between;
 
-    width: auto;
-    height: 54px;
+    gap: 30px;
+}
+
+
+/* LOGO */
+
+.site-header .brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    flex-shrink: 0;
 
     text-decoration: none;
 }
 
 
 .site-header .brand img {
-    width: 48px !important;
-    height: 48px !important;
 
-    max-width: 48px !important;
-    max-height: 48px !important;
+    width: 40px !important;
+    height: 40px !important;
 
-    min-width: 48px;
-    min-height: 48px;
+    max-width: 40px !important;
+    max-height: 40px !important;
 
     object-fit: contain;
 
@@ -64,15 +98,153 @@
 
 
 .site-header .brand span {
-    font-size: 1.05rem;
+
+    color: #f4f8ff;
+
+    font-size: 1rem;
 
     font-weight: 800;
 
-    letter-spacing: 0.18em;
-
-    color: #ffffff;
+    letter-spacing: 0.22em;
 
     line-height: 1;
+}
+
+
+/* NAV */
+
+.site-header .main-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 27px;
+
+    margin-left: auto;
+}
+
+
+.site-header .main-nav a {
+
+    position: relative;
+
+    padding: 24px 0 21px;
+
+    color: #9aabbd;
+
+    text-decoration: none;
+
+    font-size: 0.72rem;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.site-header .main-nav a:hover {
+
+    color: #ffffff;
+}
+
+
+.site-header .main-nav a.active {
+
+    color: #ffffff;
+}
+
+
+.site-header .main-nav a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 0;
+
+    height: 2px;
+
+    background:
+        var(--mp-cyan);
+}
+
+
+/* PARTE DERECHA */
+
+.header-extra {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    flex-shrink: 0;
+}
+
+
+.header-socials {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.header-socials a {
+
+    color: #a9bacb;
+
+    text-decoration: none;
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.header-socials a:hover {
+
+    color: var(--mp-cyan);
+}
+
+
+.header-pill {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 36px;
+
+    padding: 0 18px;
+
+    border:
+        1px solid var(--mp-cyan);
+
+    border-radius: 999px;
+
+    color: var(--mp-cyan);
+
+    font-size: 0.62rem;
+
+    font-weight: 700;
+
+    white-space: nowrap;
 }
 
 
@@ -80,12 +252,14 @@
    HERO
 ========================================================= */
 
-.project-hero {
+.mp-hero {
+
     position: relative;
 
     min-height: 620px;
 
     display: flex;
+
     align-items: center;
 
     overflow: hidden;
@@ -93,771 +267,219 @@
     background:
         radial-gradient(
             circle at 75% 45%,
-            rgba(56, 217, 255, 0.08),
-            transparent 32%
+            rgba(0, 207, 255, 0.07),
+            transparent 30%
         ),
-        radial-gradient(
-            circle at 20% 80%,
-            rgba(20, 100, 180, 0.06),
-            transparent 35%
-        ),
-        #030810;
+
+        #020a13;
 }
 
 
-/* Línea técnica superior */
+.mp-hero-grid {
 
-.project-hero::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-    right: 0;
-
-    height: 1px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(56, 217, 255, 0.35),
-            transparent
-        );
-
-    opacity: 0.8;
-}
-
-
-/* Luz inferior */
-
-.project-hero::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    height: 180px;
-
-    background:
-        linear-gradient(
-            to bottom,
-            transparent,
-            #030810
-        );
-
-    pointer-events: none;
-}
-
-
-/* Eliminamos completamente la imagen del hero */
-
-.project-hero-background {
-    display: none;
-}
-
-
-.project-hero-overlay {
     position: absolute;
 
     inset: 0;
 
-    background:
-        radial-gradient(
-            circle at 70% 50%,
-            rgba(56, 217, 255, 0.045),
-            transparent 28%
+    opacity: 0.16;
+
+    background-image:
+
+        linear-gradient(
+            rgba(0, 207, 255, 0.05) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(0, 207, 255, 0.05) 1px,
+            transparent 1px
         );
 
-    pointer-events: none;
+    background-size:
+        70px 70px;
+
+    mask-image:
+        linear-gradient(
+            to right,
+            black,
+            transparent 80%
+        );
 }
 
 
-/* Contenido */
+.mp-hero .container {
 
-.project-hero-content {
     position: relative;
 
     z-index: 2;
 
-    padding-top: 80px;
-    padding-bottom: 100px;
+    min-height: 620px;
 
-    max-width: 900px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
 }
 
 
-.project-kicker {
-    display: inline-flex;
+.mp-hero-content {
+
+    max-width: 900px;
+
+    padding:
+        80px 0 100px;
+}
+
+
+.mp-kicker {
+
+    display: flex;
 
     align-items: center;
 
     gap: 10px;
 
-    margin-bottom: 22px;
+    margin-bottom: 24px;
+
+    color: var(--mp-cyan);
 
     font-size: 0.68rem;
 
     font-weight: 800;
 
     letter-spacing: 0.2em;
-
-    color: var(--mp-cyan);
 }
 
 
-.project-kicker::before {
-    content: "";
+.mp-kicker span {
 
-    width: 26px;
+    width: 25px;
+
     height: 1px;
 
-    background: var(--mp-cyan);
-
-    opacity: 0.7;
+    background:
+        var(--mp-cyan);
 }
 
 
-.project-hero h1 {
-    margin: 0 0 20px;
+.mp-hero h1 {
 
-    font-size: clamp(4.5rem, 10vw, 8.5rem);
+    margin: 0 0 22px;
 
-    line-height: 0.86;
+    font-size:
+        clamp(5rem, 10vw, 9rem);
 
-    letter-spacing: -0.07em;
+    line-height: 0.84;
+
+    letter-spacing: -0.075em;
 
     color: var(--mp-white);
-
-    text-shadow:
-        0 0 50px rgba(56, 217, 255, 0.06);
 }
 
 
-.project-hero-subtitle {
+.mp-hero h2 {
+
     max-width: 720px;
 
-    margin: 0 0 20px;
+    margin: 0 0 22px;
 
-    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    font-size:
+        clamp(1.3rem, 2.4vw, 1.8rem);
 
-    line-height: 1.4;
+    font-weight: 500;
 
-    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.35;
+
+    color: #dce8f5;
 }
 
 
-.project-hero-description {
-    max-width: 680px;
+.mp-hero-description {
 
-    margin: 0 0 28px;
+    max-width: 720px;
 
-    font-size: 0.9rem;
-
-    line-height: 1.8;
+    margin: 0 0 27px;
 
     color: var(--mp-muted);
+
+    font-size: 0.86rem;
+
+    line-height: 1.85;
 }
 
 
-/* Etiquetas */
+/* TAGS */
 
-.project-tags {
+.mp-tags {
+
     display: flex;
 
     flex-wrap: wrap;
 
     gap: 8px;
-
-    margin-bottom: 32px;
-}
-
-
-.project-tags span {
-    padding: 7px 11px;
-
-    border: 1px solid rgba(56, 217, 255, 0.13);
-
-    border-radius: 999px;
-
-    background:
-        rgba(56, 217, 255, 0.035);
-
-    font-size: 0.66rem;
-
-    color: rgba(255, 255, 255, 0.58);
-}
-
-
-/* Botones */
-
-.project-hero-actions {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-}
-
-
-.project-hero .btn {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    min-height: 46px;
-
-    padding: 0 20px;
-
-    border-radius: 8px;
-
-    text-decoration: none;
-
-    font-size: 0.76rem;
-
-    font-weight: 700;
-
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        border-color 0.2s ease;
-}
-
-
-.project-hero .btn:hover {
-    transform: translateY(-2px);
-}
-
-
-.project-hero .btn-primary {
-    background: var(--mp-cyan);
-
-    color: #031018;
-}
-
-
-.project-hero .btn-secondary {
-    border: 1px solid rgba(255, 255, 255, 0.13);
-
-    background:
-        rgba(255, 255, 255, 0.025);
-
-    color: #ffffff;
-}
-
-
-.project-hero .btn-secondary:hover {
-    border-color:
-        rgba(56, 217, 255, 0.3);
-}
-/* =========================================================
-   SECCIONES
-========================================================= */
-
-.project-section {
-    position: relative;
-
-    padding: 110px 0;
-}
-
-
-.section-heading {
-    max-width: 850px;
-
-    margin-bottom: 50px;
-}
-
-
-.section-kicker {
-    display: block;
-
-    margin-bottom: 10px;
-
-    font-size: 0.67rem;
-
-    font-weight: 800;
-
-    letter-spacing: 0.18em;
-
-    color: var(--mp-cyan);
-}
-
-
-.section-heading h2 {
-    margin: 0 0 18px;
-
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-
-    line-height: 0.98;
-
-    letter-spacing: -0.045em;
-
-    color: var(--mp-white);
-}
-
-
-.section-heading p {
-    max-width: 750px;
-
-    margin: 0;
-
-    font-size: 0.95rem;
-
-    line-height: 1.8;
-
-    color: var(--mp-muted);
-}
-
-
-/* =========================================================
-   01 · OVERVIEW
-========================================================= */
-
-.project-overview {
-    padding-top: 90px;
-}
-
-
-.overview-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
-
-    gap: 14px;
-}
-
-
-.overview-card {
-    position: relative;
-
-    min-height: 220px;
-
-    padding: 25px 22px;
-
-    border: 1px solid var(--mp-border);
-
-    border-radius: 14px;
-
-    background: var(--mp-card);
-
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease;
-}
-
-
-.overview-card:hover {
-    transform: translateY(-4px);
-
-    border-color:
-        rgba(56, 217, 255, 0.28);
-}
-
-
-.overview-number {
-    display: block;
-
-    margin-bottom: 35px;
-
-    font-family:
-        "JetBrains Mono",
-        "Cascadia Code",
-        Consolas,
-        monospace;
-
-    font-size: 0.68rem;
-
-    color: var(--mp-cyan);
-}
-
-
-.overview-card h3 {
-    margin: 0 0 12px;
-
-    font-size: 1rem;
-
-    color: #ffffff;
-}
-
-
-.overview-card p {
-    margin: 0;
-
-    font-size: 0.78rem;
-
-    line-height: 1.7;
-
-    color: var(--mp-muted-soft);
-}
-
-
-/* =========================================================
-   02 · ARQUITECTURA
-========================================================= */
-
-.architecture-section {
-    padding-top: 80px;
-}
-
-
-/* DIAGRAMA */
-
-.network-diagram {
-    position: relative;
-
-    padding: 26px;
-
-    margin-bottom: 75px;
-
-    border: 1px solid var(--mp-border);
-
-    border-radius: 18px;
-
-    background: var(--mp-card);
-
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.25);
-
-    overflow: hidden;
-}
-
-
-.network-diagram::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-    right: 0;
-
-    height: 1px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(56, 217, 255, 0.8),
-            transparent
-        );
-}
-
-
-.diagram-header {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 20px;
-
-    margin-bottom: 22px;
-}
-
-
-.diagram-label {
-    display: block;
-
-    margin-bottom: 6px;
-
-    font-size: 0.64rem;
-
-    font-weight: 800;
-
-    letter-spacing: 0.18em;
-
-    color: var(--mp-cyan);
-}
-
-
-.diagram-header h3 {
-    margin: 0;
-
-    font-size: 1.15rem;
-
-    color: #ffffff;
-}
-
-
-.diagram-status {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    padding: 7px 11px;
-
-    border: 1px solid rgba(56, 217, 255, 0.18);
-
-    border-radius: 999px;
-
-    background: rgba(56, 217, 255, 0.045);
-
-    font-size: 0.62rem;
-
-    font-weight: 800;
-
-    letter-spacing: 0.08em;
-
-    color: var(--mp-cyan);
-
-    white-space: nowrap;
-}
-
-
-.diagram-status span {
-    width: 7px;
-    height: 7px;
-
-    border-radius: 50%;
-
-    background: var(--mp-cyan);
-
-    box-shadow:
-        0 0 10px rgba(56, 217, 255, 0.7);
-}
-
-
-.diagram-image-wrapper {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 20px;
-
-    border: 1px solid rgba(255, 255, 255, 0.04);
-
-    border-radius: 12px;
-
-    background:
-        rgba(2, 7, 14, 0.5);
-
-    overflow: hidden;
-}
-
-
-.network-diagram-image {
-    display: block;
-
-    width: 100%;
-
-    max-width: 1200px;
-
-    height: auto;
-
-    object-fit: contain;
-
-    border-radius: 6px;
-}
-
-
-.diagram-caption {
-    margin-top: 13px;
-
-    font-size: 0.75rem;
-
-    color: var(--mp-muted-soft);
-}
-
-
-.diagram-caption span {
-    margin-right: 8px;
-
-    color: var(--mp-cyan);
-
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   VLAN
-========================================================= */
-
-.vlan-section {
-    margin-top: 10px;
-}
-
-
-.vlan-section-heading {
-    display: grid;
-
-    grid-template-columns: 1fr 0.8fr;
-
-    gap: 60px;
-
-    align-items: end;
 
     margin-bottom: 30px;
 }
 
 
-.vlan-section-heading h3 {
-    margin: 7px 0 0;
+.mp-tags span {
 
-    font-size: clamp(2rem, 4vw, 3.2rem);
+    padding:
+        7px 11px;
 
-    line-height: 1;
+    border:
+        1px solid rgba(0, 207, 255, 0.14);
 
-    letter-spacing: -0.04em;
-
-    color: var(--mp-white);
-}
-
-
-.vlan-section-heading p {
-    max-width: 430px;
-
-    margin: 0;
-
-    font-size: 0.88rem;
-
-    line-height: 1.75;
-
-    color: var(--mp-muted-soft);
-}
-
-
-.vlan-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(5, minmax(0, 1fr));
-
-    gap: 12px;
-}
-
-
-.vlan-card {
-    padding: 22px 18px;
-
-    min-height: 185px;
-
-    border: 1px solid rgba(80, 210, 255, 0.1);
-
-    border-radius: 12px;
+    border-radius: 999px;
 
     background:
-        rgba(255, 255, 255, 0.018);
+        rgba(0, 207, 255, 0.025);
 
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        background 0.2s ease;
+    color:
+        rgba(255, 255, 255, 0.6);
+
+    font-size: 0.63rem;
 }
 
 
-.vlan-card:hover {
-    transform: translateY(-3px);
+/* BUTTONS */
 
-    border-color:
-        rgba(56, 217, 255, 0.28);
+.mp-actions {
 
-    background:
-        rgba(56, 217, 255, 0.035);
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
 }
 
 
-.vlan-number {
-    display: block;
+.mp-btn {
 
-    margin-bottom: 22px;
+    min-height: 46px;
 
-    font-family:
-        "JetBrains Mono",
-        "Cascadia Code",
-        Consolas,
-        monospace;
+    display: inline-flex;
 
-    font-size: 0.65rem;
+    align-items: center;
 
-    font-weight: 700;
+    justify-content: center;
 
-    color: var(--mp-cyan);
-}
+    gap: 18px;
 
+    padding:
+        0 20px;
 
-.vlan-card h4 {
-    margin: 0 0 14px;
+    border-radius: 6px;
 
-    font-size: 0.98rem;
-
-    color: #ffffff;
-}
-
-
-.vlan-card code {
-    display: inline-block;
-
-    margin-bottom: 16px;
-
-    padding: 5px 7px;
-
-    border-radius: 5px;
-
-    background: rgba(0, 0, 0, 0.2);
-
-    font-family:
-        "JetBrains Mono",
-        "Cascadia Code",
-        Consolas,
-        monospace;
-
-    font-size: 0.58rem;
-
-    color: var(--mp-cyan-soft);
-}
-
-
-.vlan-card p {
-    margin: 0;
+    text-decoration: none;
 
     font-size: 0.73rem;
 
-    line-height: 1.6;
-
-    color: var(--mp-muted-soft);
-}
-
-
-/* =========================================================
-   03 · SERVIDORES
-========================================================= */
-
-.infrastructure-section {
-    padding-top: 100px;
-}
-
-
-.server-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 14px;
-}
-
-
-.server-card {
-    position: relative;
-
-    min-height: 330px;
-
-    padding: 28px;
-
-    border: 1px solid var(--mp-border);
-
-    border-radius: 16px;
-
-    background: var(--mp-card);
+    font-weight: 700;
 
     transition:
         transform 0.2s ease,
@@ -865,322 +487,256 @@
 }
 
 
-.server-card:hover {
-    transform: translateY(-4px);
+.mp-btn:hover {
+
+    transform:
+        translateY(-2px);
+}
+
+
+.mp-btn-primary {
+
+    background:
+        var(--mp-cyan);
+
+    color:
+        #031018;
+}
+
+
+.mp-btn-secondary {
+
+    border:
+        1px solid rgba(255, 255, 255, 0.13);
+
+    color:
+        #ffffff;
+
+    background:
+        rgba(255, 255, 255, 0.02);
+}
+
+
+.mp-btn-secondary:hover {
 
     border-color:
-        rgba(56, 217, 255, 0.28);
+        rgba(0, 207, 255, 0.4);
 }
 
 
-.server-card-top {
+/* META */
+
+.mp-hero-meta {
+
     display: flex;
 
-    align-items: center;
+    gap: 22px;
 
-    justify-content: space-between;
+    color:
+        rgba(255, 255, 255, 0.42);
 
-    margin-bottom: 38px;
+    font-size: 0.63rem;
+
+    letter-spacing: 0.06em;
 }
 
 
-.server-index {
-    font-family:
-        "JetBrains Mono",
-        "Cascadia Code",
-        Consolas,
-        monospace;
+.mp-hero-meta span:not(:last-child)::after {
 
-    font-size: 0.65rem;
+    content: "·";
 
-    color: var(--mp-cyan);
+    margin-left: 22px;
+
+    color:
+        var(--mp-cyan);
 }
 
 
-.server-status {
-    padding: 5px 8px;
+/* HERO LATERAL */
 
-    border-radius: 5px;
+.mp-hero-side {
 
-    background: rgba(56, 217, 255, 0.06);
-
-    font-size: 0.6rem;
-
-    font-weight: 800;
-
-    letter-spacing: 0.08em;
-
-    color: var(--mp-cyan);
-}
-
-
-.server-card h3 {
-    margin: 0 0 7px;
-
-    font-family:
-        "JetBrains Mono",
-        "Cascadia Code",
-        Consolas,
-        monospace;
-
-    font-size: 1.55rem;
-
-    color: #ffffff;
-}
-
-
-.server-os {
-    display: block;
-
-    margin-bottom: 12px;
-
-    font-size: 0.78rem;
-
-    color: var(--mp-muted);
-}
-
-
-.server-card > code {
-    display: inline-block;
-
-    margin-bottom: 20px;
-
-    padding: 6px 8px;
-
-    border-radius: 6px;
-
-    background: rgba(0, 0, 0, 0.22);
-
-    font-family:
-        "JetBrains Mono",
-        "Cascadia Code",
-        Consolas,
-        monospace;
-
-    font-size: 0.66rem;
-
-    color: var(--mp-cyan-soft);
-}
-
-
-.server-card > p {
-    max-width: 520px;
-
-    margin: 0 0 22px;
-
-    font-size: 0.8rem;
-
-    line-height: 1.7;
-
-    color: var(--mp-muted-soft);
-}
-
-
-.server-services {
     display: flex;
 
-    flex-wrap: wrap;
+    flex-direction: column;
 
-    gap: 7px;
-}
+    align-items: flex-end;
 
+    gap: 11px;
 
-.server-services span {
-    padding: 5px 8px;
+    padding-right: 15px;
 
-    border: 1px solid rgba(255, 255, 255, 0.07);
-
-    border-radius: 5px;
+    color:
+        rgba(255, 255, 255, 0.46);
 
     font-size: 0.61rem;
 
-    color: rgba(255, 255, 255, 0.58);
+    letter-spacing: 0.12em;
+}
+
+
+.hero-side-line {
+
+    width: 30px;
+
+    height: 1px;
+
+    margin: 8px 0;
+
+    background:
+        var(--mp-cyan);
 }
 
 
 /* =========================================================
-   04 · TECNOLOGÍAS
+   GENERAL SECTIONS
 ========================================================= */
 
-.technology-grid {
+.mp-section {
+
+    position: relative;
+
+    padding:
+        125px 0;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.035);
+}
+
+
+.mp-section-intro {
+
     display: grid;
 
     grid-template-columns:
-        repeat(4, minmax(0, 1fr));
+        100px
+        minmax(0, 1.15fr)
+        minmax(280px, 0.75fr);
 
-    gap: 12px;
+    gap: 45px;
+
+    align-items: start;
+
+    margin-bottom: 70px;
 }
 
 
-.technology-item {
-    min-height: 125px;
+.mp-section-number {
 
-    padding: 22px;
+    padding-top: 8px;
 
-    border: 1px solid var(--mp-border);
-
-    border-radius: 12px;
-
-    background:
-        rgba(255, 255, 255, 0.018);
-}
-
-
-.technology-item strong {
-    display: block;
-
-    margin-bottom: 8px;
-
-    font-size: 0.9rem;
-
-    color: #ffffff;
-}
-
-
-.technology-item span {
-    font-size: 0.7rem;
-
-    color: var(--mp-muted-soft);
-}
-
-
-/* =========================================================
-   05 · SERVICIOS
-========================================================= */
-
-.services-table-wrapper {
-    overflow-x: auto;
-
-    border: 1px solid var(--mp-border);
-
-    border-radius: 14px;
-
-    background:
-        rgba(255, 255, 255, 0.015);
-}
-
-
-.services-table {
-    width: 100%;
-
-    min-width: 720px;
-
-    border-collapse: collapse;
-}
-
-
-.services-table th {
-    padding: 17px 20px;
-
-    text-align: left;
-
-    background:
-        rgba(56, 217, 255, 0.04);
-
-    border-bottom: 1px solid var(--mp-border);
+    color:
+        var(--mp-cyan);
 
     font-size: 0.64rem;
 
     font-weight: 800;
 
-    letter-spacing: 0.1em;
+    line-height: 1.5;
 
-    text-transform: uppercase;
-
-    color: var(--mp-cyan);
+    letter-spacing: 0.15em;
 }
 
 
-.services-table td {
-    padding: 17px 20px;
+.mp-section-title h2 {
 
-    border-bottom:
-        1px solid rgba(255, 255, 255, 0.045);
+    margin: 0;
 
-    font-size: 0.76rem;
+    font-size:
+        clamp(3rem, 5vw, 5.2rem);
 
-    color: var(--mp-muted);
+    line-height: 0.95;
+
+    letter-spacing: -0.055em;
+
+    color:
+        var(--mp-white);
 }
 
 
-.services-table tbody tr:last-child td {
-    border-bottom: none;
+.mp-section-text {
+
+    padding-top: 8px;
 }
 
 
-.services-table tbody tr:hover {
-    background:
-        rgba(56, 217, 255, 0.025);
+.mp-section-text p {
+
+    margin: 0 0 17px;
+
+    color:
+        var(--mp-muted);
+
+    font-size: 0.82rem;
+
+    line-height: 1.85;
+}
+
+
+.mp-section-text p:last-child {
+
+    margin-bottom: 0;
 }
 
 
 /* =========================================================
-   06 · IMPLEMENTACIÓN
+   PROJECT FEATURES
 ========================================================= */
 
-.timeline {
-    position: relative;
-
-    max-width: 950px;
-
-    margin: 0 auto;
-}
-
-
-.timeline::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    bottom: 0;
-
-    left: 19px;
-
-    width: 1px;
-
-    background:
-        rgba(56, 217, 255, 0.16);
-}
-
-
-.timeline-item {
-    position: relative;
+.mp-feature-grid {
 
     display: grid;
 
-    grid-template-columns: 40px 1fr;
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
 
-    gap: 25px;
-
-    padding-bottom: 45px;
+    gap: 14px;
 }
 
 
-.timeline-item:last-child {
-    padding-bottom: 0;
-}
+.mp-feature {
 
+    min-height: 220px;
 
-.timeline-number {
-    position: relative;
+    padding:
+        24px 22px;
 
-    z-index: 2;
+    border:
+        1px solid var(--mp-border);
 
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 40px;
-    height: 40px;
-
-    border: 1px solid rgba(56, 217, 255, 0.22);
-
-    border-radius: 50%;
+    border-radius: 8px;
 
     background:
-        #050c15;
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.025),
+            rgba(255, 255, 255, 0.008)
+        );
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.mp-feature:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(0, 207, 255, 0.35);
+}
+
+
+.feature-number {
+
+    display: block;
+
+    margin-bottom: 45px;
+
+    color:
+        var(--mp-cyan);
 
     font-family:
         "JetBrains Mono",
@@ -1189,30 +745,812 @@
         monospace;
 
     font-size: 0.62rem;
-
-    color: var(--mp-cyan);
 }
 
 
-.timeline-item h3 {
-    margin: 5px 0 9px;
+.mp-feature h3 {
 
-    font-size: 1rem;
+    margin: 0 0 12px;
 
-    color: #ffffff;
+    color:
+        #ffffff;
+
+    font-size: 0.92rem;
 }
 
 
-.timeline-item p {
+.mp-feature p {
+
+    margin: 0;
+
+    color:
+        var(--mp-muted);
+
+    font-size: 0.72rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ARCHITECTURE
+========================================================= */
+
+.mp-architecture {
+
+    background:
+        #030c16;
+}
+
+
+.mp-diagram {
+
+    margin-bottom: 75px;
+
+    border:
+        1px solid var(--mp-border);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.012);
+
+    overflow: hidden;
+}
+
+
+.mp-diagram-header {
+
+    min-height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        18px 22px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.mp-diagram-header > div:first-child > span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color:
+        var(--mp-cyan);
+
+    font-size: 0.58rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+}
+
+
+.mp-diagram-header h3 {
+
+    margin: 0;
+
+    color:
+        #ffffff;
+
+    font-size: 0.92rem;
+}
+
+
+.diagram-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color:
+        var(--mp-cyan);
+
+    font-size: 0.58rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+}
+
+
+.diagram-status i {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background:
+        var(--mp-cyan);
+
+    box-shadow:
+        0 0 10px rgba(0, 207, 255, 0.7);
+}
+
+
+.mp-diagram-image {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 400px;
+
+    padding: 30px;
+
+    background:
+        rgba(0, 5, 10, 0.5);
+
+    overflow: auto;
+}
+
+
+.mp-diagram-image img {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+.mp-diagram-caption {
+
+    padding:
+        13px 22px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.05);
+
+    color:
+        rgba(255, 255, 255, 0.38);
+
+    font-size: 0.65rem;
+}
+
+
+/* VLAN HEADER */
+
+.mp-subsection-header {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 0.8fr;
+
+    gap: 50px;
+
+    align-items: end;
+
+    margin-bottom: 28px;
+}
+
+
+.mp-subsection-header > div > span {
+
+    color:
+        var(--mp-cyan);
+
+    font-size: 0.61rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+}
+
+
+.mp-subsection-header h3 {
+
+    margin: 8px 0 0;
+
+    color:
+        var(--mp-white);
+
+    font-size:
+        clamp(2rem, 3vw, 3rem);
+
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+}
+
+
+.mp-subsection-header p {
+
+    max-width: 450px;
+
+    margin: 0;
+
+    color:
+        var(--mp-muted);
+
+    font-size: 0.76rem;
+
+    line-height: 1.75;
+}
+
+
+/* VLAN GRID */
+
+.mp-vlan-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+
+.mp-vlan {
+
+    min-height: 190px;
+
+    padding:
+        20px 17px;
+
+    border:
+        1px solid rgba(0, 207, 255, 0.12);
+
+    border-radius: 7px;
+
+    background:
+        rgba(255, 255, 255, 0.012);
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.mp-vlan:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(0, 207, 255, 0.3);
+}
+
+
+.vlan-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+}
+
+
+.vlan-top span:first-child {
+
+    color:
+        var(--mp-cyan);
+
+    font-family:
+        "JetBrains Mono",
+        "Cascadia Code",
+        Consolas,
+        monospace;
+
+    font-size: 0.59rem;
+}
+
+
+.vlan-top span:last-child {
+
+    color:
+        rgba(255, 255, 255, 0.3);
+
+    font-size: 0.53rem;
+
+    letter-spacing: 0.08em;
+}
+
+
+.mp-vlan h4 {
+
+    margin: 0 0 13px;
+
+    color:
+        #ffffff;
+
+    font-size: 0.9rem;
+}
+
+
+.mp-vlan code {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding:
+        5px 7px;
+
+    border-radius: 4px;
+
+    background:
+        rgba(0, 0, 0, 0.2);
+
+    color:
+        #9cecff;
+
+    font-family:
+        "JetBrains Mono",
+        "Cascadia Code",
+        Consolas,
+        monospace;
+
+    font-size: 0.56rem;
+}
+
+
+.mp-vlan p {
+
+    margin: 0;
+
+    color:
+        var(--mp-muted);
+
+    font-size: 0.65rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SERVERS
+========================================================= */
+
+.mp-server-list {
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+.mp-server {
+
+    display: grid;
+
+    grid-template-columns:
+        70px
+        minmax(260px, 0.9fr)
+        1.2fr;
+
+    gap: 35px;
+
+    padding:
+        35px 0;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    transition:
+        padding-left 0.2s ease;
+}
+
+
+.mp-server:hover {
+
+    padding-left:
+        8px;
+}
+
+
+.server-id {
+
+    color:
+        var(--mp-cyan);
+
+    font-family:
+        "JetBrains Mono",
+        "Cascadia Code",
+        Consolas,
+        monospace;
+
+    font-size: 0.63rem;
+}
+
+
+.server-main > span {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    color:
+        var(--mp-cyan);
+
+    font-size: 0.57rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+}
+
+
+.server-main h3 {
+
+    margin: 0 0 7px;
+
+    color:
+        #ffffff;
+
+    font-family:
+        "JetBrains Mono",
+        "Cascadia Code",
+        Consolas,
+        monospace;
+
+    font-size: 1.4rem;
+}
+
+
+.server-main strong {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    color:
+        var(--mp-text);
+
+    font-size: 0.75rem;
+
+    font-weight: 500;
+}
+
+
+.server-main code {
+
+    color:
+        rgba(255, 255, 255, 0.4);
+
+    font-family:
+        "JetBrains Mono",
+        "Cascadia Code",
+        Consolas,
+        monospace;
+
+    font-size: 0.62rem;
+}
+
+
+.server-description {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    gap: 22px;
+}
+
+
+.server-description p {
+
+    max-width: 600px;
+
+    margin: 0;
+
+    color:
+        var(--mp-muted);
+
+    font-size: 0.75rem;
+
+    line-height: 1.75;
+}
+
+
+.server-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+
+.server-tags span {
+
+    padding:
+        5px 8px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 4px;
+
+    color:
+        rgba(255, 255, 255, 0.5);
+
+    font-size: 0.57rem;
+}
+
+
+/* =========================================================
+   TECHNOLOGIES
+========================================================= */
+
+.mp-tech-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    border-left:
+        1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+.mp-tech {
+
+    min-height: 130px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding:
+        25px;
+
+    border-right:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+.mp-tech strong {
+
+    margin-bottom: 7px;
+
+    color:
+        #ffffff;
+
+    font-size: 0.82rem;
+}
+
+
+.mp-tech span {
+
+    color:
+        var(--mp-muted);
+
+    font-size: 0.63rem;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.mp-service-list {
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+.mp-service-row {
+
+    display: grid;
+
+    grid-template-columns:
+        50px
+        1.1fr
+        1fr
+        0.8fr;
+
+    align-items: center;
+
+    gap: 25px;
+
+    min-height: 70px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.mp-service-row > span:first-child {
+
+    color:
+        var(--mp-cyan);
+
+    font-family:
+        "JetBrains Mono",
+        "Cascadia Code",
+        Consolas,
+        monospace;
+
+    font-size: 0.6rem;
+}
+
+
+.mp-service-row strong {
+
+    color:
+        #ffffff;
+
+    font-size: 0.75rem;
+}
+
+
+.mp-service-row span:nth-child(3) {
+
+    color:
+        rgba(255, 255, 255, 0.45);
+
+    font-family:
+        "JetBrains Mono",
+        "Cascadia Code",
+        Consolas,
+        monospace;
+
+    font-size: 0.59rem;
+}
+
+
+.mp-service-row p {
+
+    margin: 0;
+
+    color:
+        var(--mp-muted);
+
+    font-size: 0.65rem;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.mp-timeline {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+
+.mp-timeline article {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        55px
+        1fr;
+
+    gap: 30px;
+
+    padding-bottom: 42px;
+}
+
+
+.mp-timeline article::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 29px;
+    left: 13px;
+
+    width: 1px;
+
+    height: calc(100% - 8px);
+
+    background:
+        rgba(0, 207, 255, 0.15);
+}
+
+
+.mp-timeline article:last-child::before {
+
+    display: none;
+}
+
+
+.mp-timeline article > span {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid rgba(0, 207, 255, 0.25);
+
+    border-radius: 50%;
+
+    background:
+        #020a13;
+
+    color:
+        var(--mp-cyan);
+
+    font-family:
+        "JetBrains Mono",
+        "Cascadia Code",
+        Consolas,
+        monospace;
+
+    font-size: 0.55rem;
+}
+
+
+.mp-timeline h3 {
+
+    margin: 3px 0 8px;
+
+    color:
+        #ffffff;
+
+    font-size: 0.9rem;
+}
+
+
+.mp-timeline p {
+
     max-width: 650px;
 
     margin: 0;
 
-    font-size: 0.78rem;
+    color:
+        var(--mp-muted);
+
+    font-size: 0.72rem;
 
     line-height: 1.7;
-
-    color: var(--mp-muted-soft);
 }
 
 
@@ -1220,7 +1558,15 @@
    DOCUMENTACIÓN
 ========================================================= */
 
-.documentation-grid {
+.mp-documentation {
+
+    background:
+        #030c16;
+}
+
+
+.mp-doc-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -1230,23 +1576,43 @@
 }
 
 
-.documentation-card {
-    min-height: 250px;
+.mp-doc {
 
-    padding: 25px;
+    min-height: 260px;
 
-    border: 1px solid var(--mp-border);
+    padding:
+        26px;
 
-    border-radius: 14px;
+    border:
+        1px solid var(--mp-border);
 
-    background: var(--mp-card);
+    border-radius: 8px;
+
+    background:
+        rgba(255, 255, 255, 0.012);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
 }
 
 
-.documentation-type {
-    display: inline-block;
+.mp-doc:hover {
 
-    margin-bottom: 35px;
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(0, 207, 255, 0.32);
+}
+
+
+.doc-type {
+
+    margin-bottom: 42px;
+
+    color:
+        var(--mp-cyan);
 
     font-family:
         "JetBrains Mono",
@@ -1254,42 +1620,48 @@
         Consolas,
         monospace;
 
-    font-size: 0.63rem;
+    font-size: 0.59rem;
 
-    font-weight: 700;
-
-    color: var(--mp-cyan);
+    font-weight: 800;
 }
 
 
-.documentation-card h3 {
+.mp-doc h3 {
+
     margin: 0 0 12px;
 
-    font-size: 1.05rem;
+    color:
+        #ffffff;
 
-    color: #ffffff;
+    font-size: 1rem;
 }
 
 
-.documentation-card p {
-    margin: 0 0 22px;
+.mp-doc p {
 
-    font-size: 0.77rem;
+    max-width: 330px;
 
-    line-height: 1.7;
+    margin: 0 0 25px;
 
-    color: var(--mp-muted-soft);
+    color:
+        var(--mp-muted);
+
+    font-size: 0.7rem;
+
+    line-height: 1.75;
 }
 
 
-.documentation-link {
-    font-size: 0.73rem;
+.mp-doc a {
 
-    font-weight: 700;
-
-    color: var(--mp-cyan);
+    color:
+        var(--mp-cyan);
 
     text-decoration: none;
+
+    font-size: 0.66rem;
+
+    font-weight: 700;
 }
 
 
@@ -1297,140 +1669,176 @@
    RESULTADO
 ========================================================= */
 
-.project-result {
-    padding: 100px 0;
+.mp-result {
+
+    padding:
+        110px 0;
+
+    background:
+        #020a13;
 }
 
 
-.result-box {
-    position: relative;
+.mp-result-box {
 
-    padding: 55px;
+    display: grid;
 
-    border: 1px solid rgba(56, 217, 255, 0.16);
+    grid-template-columns:
+        1fr auto;
 
-    border-radius: 18px;
+    gap: 70px;
+
+    align-items: center;
+
+    padding:
+        55px;
+
+    border:
+        1px solid rgba(0, 207, 255, 0.22);
+
+    border-radius: 9px;
 
     background:
         radial-gradient(
-            circle at top right,
-            rgba(56, 217, 255, 0.07),
-            transparent 45%
+            circle at 85% 50%,
+            rgba(0, 207, 255, 0.055),
+            transparent 35%
         ),
 
-        rgba(255, 255, 255, 0.018);
-
-    overflow: hidden;
+        #04111d;
 }
 
 
-.result-box h2 {
-    max-width: 750px;
+.mp-result-box > div:first-child > span {
 
-    margin: 10px 0 18px;
+    color:
+        var(--mp-cyan);
 
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: 0.61rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+}
+
+
+.mp-result-box h2 {
+
+    max-width: 700px;
+
+    margin:
+        12px 0 18px;
+
+    color:
+        var(--mp-white);
+
+    font-size:
+        clamp(2.6rem, 5vw, 4.5rem);
 
     line-height: 0.98;
 
-    letter-spacing: -0.045em;
-
-    color: var(--mp-white);
+    letter-spacing: -0.05em;
 }
 
 
-.result-box > p {
-    max-width: 680px;
+.mp-result-box p {
+
+    max-width: 650px;
 
     margin: 0;
 
-    font-size: 0.9rem;
+    color:
+        var(--mp-muted);
+
+    font-size: 0.78rem;
 
     line-height: 1.8;
-
-    color: var(--mp-muted);
 }
 
 
-.result-stats {
+.mp-result-stats {
+
     display: flex;
 
-    flex-wrap: wrap;
-
-    gap: 50px;
-
-    margin-top: 45px;
+    gap: 42px;
 }
 
 
-.result-stats div {
+.mp-result-stats div {
+
     display: flex;
 
     flex-direction: column;
 }
 
 
-.result-stats strong {
+.mp-result-stats strong {
+
+    color:
+        var(--mp-cyan);
+
     font-size: 2.2rem;
 
     line-height: 1;
-
-    color: var(--mp-cyan);
 }
 
 
-.result-stats span {
-    margin-top: 6px;
+.mp-result-stats span {
 
-    font-size: 0.68rem;
+    margin-top: 7px;
 
-    color: var(--mp-muted-soft);
+    color:
+        rgba(255, 255, 255, 0.42);
+
+    font-size: 0.6rem;
 }
 
 
 /* =========================================================
-   VOLVER
+   BACK
 ========================================================= */
 
-.project-back-section {
-    padding: 20px 0 100px;
+.mp-back {
+
+    padding:
+        20px 0 100px;
 }
 
 
-.project-back-link {
+.mp-back a {
+
     display: inline-flex;
 
     align-items: center;
 
-    padding: 12px 16px;
+    padding:
+        11px 15px;
 
-    border: 1px solid rgba(255, 255, 255, 0.09);
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
 
-    border-radius: 8px;
+    border-radius: 6px;
 
-    background:
-        rgba(255, 255, 255, 0.02);
-
-    color: rgba(255, 255, 255, 0.7);
+    color:
+        rgba(255, 255, 255, 0.55);
 
     text-decoration: none;
 
-    font-size: 0.75rem;
+    font-size: 0.68rem;
 
     transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        color 0.2s ease;
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 
-.project-back-link:hover {
-    transform: translateX(-3px);
+.mp-back a:hover {
+
+    color:
+        var(--mp-cyan);
 
     border-color:
-        rgba(56, 217, 255, 0.25);
-
-    color: var(--mp-cyan);
+        rgba(0, 207, 255, 0.25);
 }
 
 
@@ -1439,23 +1847,31 @@
 ========================================================= */
 
 .site-footer {
+
     border-top:
         1px solid rgba(255, 255, 255, 0.06);
+
+    background:
+        #020a13;
 }
 
 
 .site-footer .footer-inner {
+
+    min-height: 90px;
+
     display: flex;
+
+    align-items: center;
 
     justify-content: space-between;
 
     gap: 20px;
 
-    padding: 30px 0;
+    color:
+        rgba(255, 255, 255, 0.35);
 
-    font-size: 0.68rem;
-
-    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.63rem;
 }
 
 
@@ -1463,164 +1879,475 @@
    RESPONSIVE
 ========================================================= */
 
-@media (max-width: 1050px) {
+@media (max-width: 1200px) {
 
-    .overview-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+
+    .site-header .main-nav {
+
+        gap: 18px;
+
     }
 
 
-    .vlan-grid {
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
+    .header-extra {
+
+        gap: 12px;
+
     }
 
 
-    .technology-grid {
+    .header-pill {
+
+        padding: 0 13px;
+
+    }
+
+
+    .mp-section-intro {
+
         grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+            80px
+            1fr
+            0.75fr;
+
+        gap: 30px;
+
+    }
+
+
+    .mp-feature-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .mp-vlan-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
     }
 
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 
-    .project-section {
-        padding: 80px 0;
+
+    .site-header .main-nav {
+
+        display: none;
+
     }
 
 
-    .project-hero {
-        min-height: 570px;
+    .site-header .header-inner {
+
+        justify-content: space-between;
+
     }
 
 
-    .project-hero h1 {
-        font-size: clamp(3.8rem, 15vw, 6rem);
+    .header-extra {
+
+        margin-left: auto;
+
     }
 
 
-    .vlan-section-heading {
-        grid-template-columns: 1fr;
+    .mp-hero-side {
 
-        gap: 20px;
+        display: none;
+
     }
 
 
-    .server-grid {
-        grid-template-columns: 1fr;
+    .mp-section-intro {
+
+        grid-template-columns:
+            80px
+            1fr;
+
     }
 
 
-    .documentation-grid {
-        grid-template-columns: 1fr;
+    .mp-section-text {
+
+        grid-column:
+            2;
+
     }
 
 
-    .result-box {
-        padding: 35px 25px;
+    .mp-server {
+
+        grid-template-columns:
+            55px
+            1fr;
+
+    }
+
+
+    .server-description {
+
+        grid-column:
+            2;
+
+    }
+
+
+    .mp-tech-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .mp-service-row {
+
+        grid-template-columns:
+            40px
+            1fr
+            1fr;
+
+    }
+
+
+    .mp-service-row p {
+
+        display: none;
+
+    }
+
+
+    .mp-result-box {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .mp-result-stats {
+
+        margin-top: 10px;
+
     }
 
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
-    .site-header .brand {
-        gap: 8px;
+
+    .site-header .header-extra {
+
+        display: none;
+
     }
 
 
     .site-header .brand img {
-        width: 42px !important;
-        height: 42px !important;
 
-        max-width: 42px !important;
-        max-height: 42px !important;
+        width: 38px !important;
+        height: 38px !important;
 
-        min-width: 42px;
-        min-height: 42px;
+        max-width: 38px !important;
+        max-height: 38px !important;
+
     }
 
 
     .site-header .brand span {
+
         font-size: 0.9rem;
+
     }
 
 
-    .project-hero-content {
-        padding-top: 70px;
-        padding-bottom: 80px;
+    .mp-hero {
+
+        min-height: 580px;
+
     }
 
 
-    .project-hero-description {
-        font-size: 0.85rem;
+    .mp-hero .container {
+
+        min-height: 580px;
+
     }
 
 
-    .project-tags span {
-        font-size: 0.62rem;
+    .mp-hero-content {
+
+        padding:
+            70px 0 80px;
+
     }
 
 
-    .overview-grid {
-        grid-template-columns: 1fr;
+    .mp-hero h1 {
+
+        font-size:
+            clamp(4rem, 18vw, 6rem);
+
     }
 
 
-    .vlan-grid {
-        grid-template-columns: 1fr;
+    .mp-hero h2 {
+
+        font-size: 1.15rem;
+
     }
 
 
-    .technology-grid {
-        grid-template-columns: 1fr;
+    .mp-hero-description {
+
+        font-size: 0.78rem;
+
     }
 
 
-    .network-diagram {
-        padding: 17px;
+    .mp-section {
+
+        padding:
+            85px 0;
+
     }
 
 
-    .diagram-header {
+    .mp-section-intro {
+
+        display: block;
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .mp-section-number {
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .mp-section-title h2 {
+
+        font-size:
+            clamp(2.7rem, 12vw, 4rem);
+
+    }
+
+
+    .mp-section-text {
+
+        margin-top: 25px;
+
+    }
+
+
+    .mp-feature-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .mp-vlan-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .mp-subsection-header {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .mp-diagram {
+
+        margin-bottom: 55px;
+
+    }
+
+
+    .mp-diagram-header {
+
         align-items: flex-start;
 
         flex-direction: column;
+
     }
 
 
-    .diagram-image-wrapper {
-        padding: 10px;
+    .mp-diagram-image {
+
+        justify-content: flex-start;
+
+        padding: 15px;
 
         overflow-x: auto;
+
     }
 
 
-    .network-diagram-image {
-        min-width: 650px;
+    .mp-diagram-image img {
 
-        max-width: none;
+        min-width: 700px;
+
     }
 
 
-    .server-card {
-        min-height: auto;
+    .mp-server {
 
-        padding: 23px;
+        grid-template-columns:
+            40px
+            1fr;
+
+        gap: 20px;
+
+        padding:
+            28px 0;
+
     }
 
 
-    .result-stats {
-        gap: 30px;
+    .server-description {
+
+        grid-column:
+            2;
+
+    }
+
+
+    .mp-tech-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .mp-service-row {
+
+        grid-template-columns:
+            35px
+            1fr;
+
+        gap: 10px;
+
+        padding:
+            15px 0;
+
+    }
+
+
+    .mp-service-row span:nth-child(3) {
+
+        grid-column:
+            2;
+
+    }
+
+
+    .mp-doc-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .mp-result {
+
+        padding:
+            80px 0;
+
+    }
+
+
+    .mp-result-box {
+
+        padding:
+            32px 24px;
+
+    }
+
+
+    .mp-result-stats {
+
+        gap: 25px;
+
     }
 
 
     .site-footer .footer-inner {
+
+        min-height: 100px;
+
         flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+
+    .mp-hero-meta {
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+    }
+
+
+    .mp-hero-meta span:not(:last-child)::after {
+
+        margin-left: 8px;
+
+    }
+
+
+    .mp-actions {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .mp-btn {
+
+        width: 100%;
+
+    }
+
+
+    .mp-result-stats {
+
+        flex-wrap: wrap;
+
     }
 
 }
